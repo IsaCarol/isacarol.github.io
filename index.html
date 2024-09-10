@@ -7,10 +7,10 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0; 
+            margin: 0;
             padding: 0;
-            background-color: #e9ecef;
-            color: #333; 
+            background-color: #003358; /* Azul petróleo escuro */
+            color: #ffffff; /* Texto branco */
         }
         .header {
             background-color: #343a40;
@@ -22,7 +22,8 @@
             max-width: 800px;
             margin: 20px auto;
             padding: 20px;
-            background-color: #fff;
+            background-color: #ffffff;
+            color: #000000;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
@@ -30,7 +31,7 @@
             font-size: 2em;
             margin-bottom: 10px;
         }
-        p {
+        p, ul {
             font-size: 1.1em;
             line-height: 1.6;
         }
@@ -42,27 +43,135 @@
         a:hover {
             text-decoration: underline;
         }
-        .project-list {
-            list-style: none;
-            padding: 0;
+        .profile {
+            text-align: center;
+            margin-bottom: 30px;
         }
-        .project-list li {
-            margin: 10px 0;
+        .profile img {
+            border-radius: 50%;
+            max-width: 150px;
+            height: auto;
+        }
+        .resume-link {
+            display: block;
+            margin-top: 10px;
+            font-size: 1.1em;
+            text-align: center;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .resume-link:hover {
+            text-decoration: underline;
+        }
+        .section {
+            margin-top: 20px;
+        }
+        .section h2 {
+            font-size: 1.5em;
+            color: #003358;
+        }
+        .back-link {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 1.1em;
+            color: #007bff;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <header class="header">
         <h1>Portfólio de Power BI</h1>
-        <p>Bem-vindo à minha página de projetos de Power BI</p>
+        <p>Bem-vindo ao meu perfil</p>
     </header>
     <div class="container">
-        <p>Explore meus projetos mais recentes de Power BI, desenvolvidos para fornecer insights valiosos e visualizações impactantes.</p>
-        <ul class="project-list">
-            <li><a href="analise-vendas.html">Relatório Análise de Vendas</a> - Uma visão detalhada das tendências de vendas e desempenho de produtos.</li>
-            <li><a href="dashboard-marketing.html">Dashboard de Marketing</a> - Monitoramento e análise das campanhas de marketing.</li>
-            <li><a href="relatorio-financeiro.html">Relatório Financeiro</a> - Análise abrangente dos dados financeiros e relatórios.</li>
-        </ul>
+        <div class="profile">
+            <img src="images/eu.jpeg" alt="Sua Foto">
+            <p><strong>Isabeli Carolina dos Santos</strong></p>
+            <p>Maringá, PR | +55 44 99929-7235 | isacaroltr@gmail.com</p>
+            <p><a href="https://linkedin.com/in/isabeli-caroli-na-066780210/" class="resume-link" target="_blank">LinkedIn</a></p>
+            <a href="path/to/your-resume.pdf" class="resume-link" target="_blank">Baixar Currículo</a>
+        </div>
+
+        <div class="section">
+            <h2>Sobre Mim</h2>
+            <p>Meu objetivo é conquistar uma oportunidade na área de dados. Motivado a aplicar habilidades em análise estatística, visualização de dados e ferramentas de BI, contribuindo com soluções inovadoras, enquanto continuo a desenvolver minhas habilidades e conhecimento.</p>
+        </div>
+
+        <div class="section">
+            <h2>Experiência</h2>
+            <ul>
+                <li><strong>Usina de Açúcar Santa Terezinha, Maringá</strong> — Auxiliar de Entomologia (Fev 2022 - Jun 2022)</li>
+                <li><strong>Bellinati Perez, Maringá</strong> — Negociador de Cobrança (Dez 2023 - Mar 2024)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Formação</h2>
+            <ul>
+                <li><strong>Análise e Desenvolvimento de Sistemas</strong>, UniFatecie (Mar 2023 - Jun 2025)</li>
+                <li><strong>Engenharia Química</strong>, UEM (Trancado)</li>
+                <li><strong>Formação de Docentes</strong>, Colégio Estadual James Patrick Clark (Fev 2018 - Dez 2021)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Conhecimentos</h2>
+            <ul>
+                <li>Python, SQL, NoSQL, R, Power BI, Tableau, MySQL, PostgreSQL</li>
+                <li>Banco de Dados, Machine Learning, Linux, Pandas, NumPy, Seaborn</li>
+                <li>Excel, Google Analytics, GitHub, T-SQL, Data Warehouse, SCRUM</li>
+                <li>Kanban, PySpark, Athena, ETL, DataLake</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Cursos</h2>
+            <ul>
+                <li><strong>Ciências de Dados</strong> - Udemy - 60 Horas</li>
+                <li><strong>Banco de dados</strong> - Udemy - 60 Horas</li>
+                <li><strong>Fundamentos de BI</strong> - DIO - 10 Horas</li>
+                <li><strong>Python Básico</strong> - Fundação Bradesco - 18 Horas</li>
+                <li><strong>Estatística</strong> - Udemy - 60 Horas</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Idiomas</h2>
+            <ul>
+                <li><strong>Inglês Intermediário</strong> - CCAA (2021 - 2022)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Habilidades</h2>
+            <ul>
+                <li>Constante aprendizado</li>
+                <li>Escuta ativa</li>
+                <li>Comunicação assertiva</li>
+                <li>Facilidade de trabalhar em grupo</li>
+                <li>Organização</li>
+                <li>Proatividade</li>
+                <li>Capacidade analítica</li>
+                <li>Fácil adaptação</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Projetos</h2>
+            <ul class="project-list">
+                <li><a href="analise-vendas.html">Relatório Análise de Vendas</a> - Uma visão detalhada das tendências de vendas e desempenho de produtos.</li>
+                <li><a href="link_para_projeto2.html">Dashboard de Marketing</a> - Monitoramento e análise das campanhas de marketing.</li>
+                <li><a href="link_para_projeto3.html">Relatório Financeiro</a> - Análise abrangente dos dados financeiros e relatórios.</li>
+            </ul>
+        </div>
+
+        <a href="index.html" class="back-link">Voltar para a página inicial</a>
     </div>
 </body>
 </html>
