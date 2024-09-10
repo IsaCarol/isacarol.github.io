@@ -11,60 +11,84 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #282a36;
-            color: #f8f8f2;
+            background-color: #22453a; /* Fundo principal */
+            color: #fff;
         }
         header {
-            background-color: #44475a;
+            background-color: #22453a; /* Fundo do cabeçalho */
             padding: 20px;
             text-align: center;
-            border-bottom: 2px solid #6272a4;
+            border-bottom: 1px solid #1e3a2a;
         }
         nav {
-            background-color: #44475a;
+            background-color: #1e3a2a; /* Fundo do menu */
             padding: 10px;
             text-align: center;
+            border-bottom: 1px solid #1e3a2a;
         }
         nav a {
-            color: #f8f8f2;
+            color: #fff;
             text-decoration: none;
             margin: 0 15px;
             font-weight: bold;
             padding: 10px 20px;
-            background-color: #6272a4;
+            background-color: #1f4a3d; /* Cor de fundo dos links */
             border-radius: 8px;
             transition: background 0.3s;
         }
         nav a:hover {
-            background-color: #50fa7b;
+            background-color: #1e5a4b; /* Cor de fundo dos links ao passar o mouse */
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
             padding: 30px;
-            background-color: #44475a;
+            background-color: #29293d; /* Cor de fundo da container */
             border-radius: 12px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
         }
         h2 {
-            color: #ff79c6;
+            color: #f1c40f; /* Cor dos títulos principais */
             margin-bottom: 15px;
-            border-bottom: 2px solid #ff79c6;
+            border-bottom: 2px solid #f1c40f;
+            padding-bottom: 5px;
+        }
+        h3 {
+            color: #f1c40f; /* Cor dos subtítulos */
+            margin-top: 30px;
+            border-bottom: 2px solid #f1c40f;
             padding-bottom: 5px;
         }
         p, li {
-            color: #f8f8f2;
+            color: #e0e0e0; /* Cor do texto */
         }
-        .section-title {
-            color: #ff79c6;
-            margin-top: 30px;
+        .section-content {
+            margin-bottom: 20px;
+        }
+        .contact-info {
+            margin-bottom: 20px;
+        }
+        .contact-info a {
+            color: #f1c40f; /* Cor dos links de contato */
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .icon {
+            font-size: 1.5em;
+            margin-right: 10px;
+            color: #f1c40f; /* Cor dos ícones */
         }
         ul {
             list-style-type: none;
             padding-left: 0;
         }
-        .section-content {
-            margin-bottom: 20px;
+        .section-content ul {
+            padding-left: 20px;
+        }
+        .section-content li {
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -78,58 +102,60 @@
     </nav>
     <div class="container">
         <h2>Isabeli Carolina dos Santos</h2>
-        <p>Maringá, PR<br>
-           +55 44 99929-7235<br>
-           isacaroltr@gmail.com<br>
-           <a href="https://www.linkedin.com/in/isabeli-carolina-066780210/" style="color: #50fa7b;">linkedin.com/in/isabeli-carolina-066780210/</a></p>
+        <div class="contact-info">
+            <p><i class="fas fa-map-marker-alt icon"></i>Maringá, PR</p>
+            <p><i class="fas fa-phone icon"></i>+55 44 99929-7235</p>
+            <p><i class="fas fa-envelope icon"></i><a href="mailto:isacaroltr@gmail.com">isacaroltr@gmail.com</a></p>
+            <p><i class="fab fa-linkedin icon"></i><a href="https://www.linkedin.com/in/isabeli-carolina-066780210/" target="_blank">linkedin.com/in/isabeli-carolina-066780210/</a></p>
+        </div>
         <p>Meu objetivo é conquistar uma oportunidade na área de dados. Motivado a aplicar habilidades em análise estatística, visualização de dados e ferramentas de BI, contribuindo com soluções inovadoras, enquanto continuo a desenvolver minhas habilidades e conhecimento.</p>
 
-        <h3 class="section-title">Experiência</h3>
+        <h3>Experiência</h3>
         <div class="section-content">
             <p><strong>Usina de Açúcar Santa Terezinha</strong>, Maringá — <em>Auxiliar de Entomologia</em><br>Fev de 2022 - Jun de 2022</p>
             <p><strong>Bellinati Perez</strong>, Maringá — <em>Negociador de Cobrança</em><br>Dez de 2023 - Mar de 2024</p>
         </div>
 
-        <h3 class="section-title">Formação</h3>
+        <h3>Formação</h3>
         <div class="section-content">
             <p><strong>Análise e Desenvolvimento de Sistemas</strong>, UniFatecie<br>Mar de 2023 - Jun de 2025</p>
             <p><strong>Engenharia Química</strong>, UEM — <em>Trancado</em></p>
             <p><strong>Formação de Docentes</strong>, Colégio Estadual James Patrick Clark<br>Fev de 2018 - Dez de 2021</p>
         </div>
 
-        <h3 class="section-title">Conhecimentos</h3>
+        <h3>Conhecimentos</h3>
         <div class="section-content">
             <p>Python - SQL - NoSQL - R - Power BI - Tableau - MySQL - PostgreSQL - Banco de Dados - Machine Learning - Linux - Pandas - NumPy - Seaborn - Excel - Google Analytics - GitHub - T-SQL - Data Warehouse - SCRUM - Kanban - PySpark - Athena - ETL - DataLake.</p>
         </div>
 
-        <h3 class="section-title">Cursos</h3>
+        <h3>Cursos</h3>
         <div class="section-content">
             <ul>
-                <li>Ciências de Dados — Udemy — 60 Horas</li>
-                <li>Banco de Dados — Udemy — 60 Horas</li>
-                <li>Fundamentos de BI — DIO — 10 Horas</li>
-                <li>Python Básico — Fundação Bradesco — 18 Horas</li>
-                <li>Estatística — Udemy — 60 Horas</li>
-                <li>Bootcamp NTTDATA Engenharia de Dados com Python — DIO — 92 Horas</li>
+                <li><i class="fas fa-book icon"></i>Ciências de Dados — Udemy — 60 Horas</li>
+                <li><i class="fas fa-book icon"></i>Banco de Dados — Udemy — 60 Horas</li>
+                <li><i class="fas fa-book icon"></i>Fundamentos de BI — DIO — 10 Horas</li>
+                <li><i class="fas fa-book icon"></i>Python Básico — Fundação Bradesco — 18 Horas</li>
+                <li><i class="fas fa-book icon"></i>Estatística — Udemy — 60 Horas</li>
+                <li><i class="fas fa-book icon"></i>Bootcamp NTTDATA Engenharia de Dados com Python — DIO — 92 Horas</li>
             </ul>
         </div>
 
-        <h3 class="section-title">Idiomas</h3>
+        <h3>Idiomas</h3>
         <div class="section-content">
-            <p>Inglês Intermediário — CCAA (2021 - 2022)</p>
+            <p><i class="fas fa-language icon"></i>Inglês Intermediário — CCAA (2021 - 2022)</p>
         </div>
 
-        <h3 class="section-title">Habilidades</h3>
+        <h3>Habilidades</h3>
         <div class="section-content">
             <ul>
-                <li>Constante aprendizado;</li>
-                <li>Escuta ativa;</li>
-                <li>Comunicação assertiva;</li>
-                <li>Facilidade de trabalhar em grupo;</li>
-                <li>Organização;</li>
-                <li>Proatividade;</li>
-                <li>Capacidade analítica;</li>
-                <li>Fácil adaptação;</li>
+                <li><i class="fas fa-check icon"></i>Constante aprendizado;</li>
+                <li><i class="fas fa-check icon"></i>Escuta ativa;</li>
+                <li><i class="fas fa-check icon"></i>Comunicação assertiva;</li>
+                <li><i class="fas fa-check icon"></i>Facilidade de trabalhar em grupo;</li>
+                <li><i class="fas fa-check icon"></i>Organização;</li>
+                <li><i class="fas fa-check icon"></i>Proatividade;</li>
+                <li><i class="fas fa-check icon"></i>Capacidade analítica;</li>
+                <li><i class="fas fa-check icon"></i>Fácil adaptação;</li>
             </ul>
         </div>
     </div>
