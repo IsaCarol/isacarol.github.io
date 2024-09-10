@@ -9,20 +9,20 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #003358; /* Azul petróleo mais escuro */
-            color: #ffffff; /* Texto branco para contraste */
+            background-color: #003358; /* Azul petróleo escuro */
+            color: #000000; /* Texto preto */
         }
         .container {
             max-width: 800px;
             margin: 20px auto;
             padding: 20px;
             background-color: #ffffff; /* Fundo branco para a área do conteúdo */
-            color: #000000; /* Texto preto dentro da área do conteúdo para melhor legibilidade */
+            color: #000000; /* Texto preto dentro da área do conteúdo */
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         h1, h2, h3 {
-            color: #003358; /* Cor do texto dos títulos em azul petróleo escuro */
+            color: #003358; /* Cor dos títulos em azul petróleo escuro */
         }
         h1 {
             font-size: 2em;
@@ -50,10 +50,28 @@
             height: auto;
             border-radius: 8px;
         }
+        .back-button {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background-color: #00bcd4; /* Cor do botão */
+            color: #ffffff; /* Cor do texto do botão */
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1em;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+        .back-button:hover {
+            background-color: #0097a7; /* Cor do botão ao passar o mouse */
+        }
     </style>
 </head>
 <body>
     <div class="container">
+        <a href="index.html" class="back-button">← Voltar para a Página Principal</a>
         <h1>Projeto 1 - Análise de Vendas</h1>
         <p>Este projeto tem como objetivo analisar os dados de vendas de uma empresa fictícia para identificar as principais tendências e oportunidades de mercado.</p>
         
