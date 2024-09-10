@@ -3,137 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Análise de Vendas</title> 
+    <title>Relatório Análise de Vendas</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #003358; /* Azul petróleo escuro */
-            color: #000000; /* Texto preto */
+            background-color: #ffffff; /* Fundo branco */
+            color: #333333; /* Texto preto */
+        }
+        .header {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
         }
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 20px auto;
             padding: 20px;
-            background-color: #ffffff; /* Fundo branco para a área do conteúdo */
-            color: #000000; /* Texto preto dentro da área do conteúdo */
+            background-color: #ffffff;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
-        h1, h2, h3 {
-            color: #003358; /* Cor dos títulos em azul petróleo escuro */
+        .text-content {
+            flex: 1;
+            padding-right: 20px;
         }
-        h1 {
-            font-size: 2em;
-            margin-bottom: 10px;
+        .text-content h1 {
+            color: #003358;
         }
-        h2, h3 {
-            font-size: 1.5em;
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
-        p, ul {
+        .text-content p {
             font-size: 1.1em;
             line-height: 1.6;
         }
-        a {
-            color: #00bcd4; /* Cor dos links em tom claro de azul */
-            text-decoration: none;
-            font-weight: bold;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        img {
+        .image-content img {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
         }
-        .back-button {
-            display: inline-block;
-            margin-bottom: 20px;
-            padding: 10px 20px;
-            background-color: #00bcd4; /* Cor do botão */
-            color: #ffffff; /* Cor do texto do botão */
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 1em;
-            border: none;
-            cursor: pointer;
+        .back-link {
+            display: block;
+            margin-top: 20px;
             text-align: center;
+            font-size: 1.1em;
+            color: #007bff;
+            text-decoration: none;
         }
-        .back-button:hover {
-            background-color: #0097a7; /* Cor do botão ao passar o mouse */
+        .back-link:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
+    <header class="header">
+        <h1>Relatório Análise de Vendas</h1>
+    </header>
     <div class="container">
-        <a href="index.html" class="back-button">← Voltar para a Página Principal</a>
-        <h1>Projeto 1 - Análise de Vendas</h1>
-        <p>Este projeto tem como objetivo analisar os dados de vendas de uma empresa fictícia para identificar as principais tendências e oportunidades de mercado.</p>
-        
-        <h2>Objetivos</h2>
-        <ul>
-            <li>Analisar o desempenho de vendas ao longo do ano.</li>
-            <li>Identificar os produtos mais vendidos.</li>
-            <li>Sugerir estratégias de marketing com base nos dados.</li>
-        </ul>
+        <div class="text-content">
+            <p>Aqui estão os detalhes do projeto de análise de vendas.</p>
+            <p><strong>Objetivo:</strong> Analisar os dados de vendas de uma empresa fictícia para identificar as principais tendências e oportunidades de mercado.</p>
+            
+            <h2>Objetivos</h2>
+            <ul>
+                <li>Analisar o desempenho de vendas ao longo do ano.</li>
+                <li>Identificar os produtos mais vendidos.</li>
+                <li>Sugerir estratégias de marketing com base nos dados.</li>
+            </ul>
 
-        <h2>Tecnologias Utilizadas</h2>
-        <ul>
-            <li><strong>Power BI</strong>: Para criação de dashboards interativos</li>
-            <li><strong>Power Query</strong>: Para transformação dos dados e utilização do editor avançado (M language), para adição de colunas e renomeação</li>
-            <li><strong>Excel</strong>: Para manipulação inicial dos dados</li>
-        </ul>
+            <h2>Tecnologias Utilizadas</h2>
+            <ul>
+                <li>Power BI: Para criação de dashboards interativos</li>
+                <li>Power Query: Para transformação dos dados e utilização do editor avançado (M language), para adição de colunas e renomeação</li>
+                <li>Excel: Para manipulação inicial dos dados</li>
+            </ul>
 
-        <h2>Passo a Passo</h2>
-        <h3>1. Coleta de Dados</h3>
-        <ul>
-            <li>Os dados com dados fictícios foram gerados com a ajuda do ChatGPT.</li>
-            <li>O arquivo CSV contém informações como: <code>Data da Venda</code>, <code>Produto</code>, <code>Quantidade</code>, <code>Valor</code>, <code>Estado</code>, <code>Categoria</code>.</li>
-        </ul>
+            <h2>Passo a Passo</h2>
+            <h3>1. Coleta de Dados</h3>
+            <p>Os dados com dados fictícios foram gerados com a ajuda do ChatGPT. O arquivo CSV contém informações como: Data da Venda, Produto, Quantidade, Valor, Estado, Categoria.</p>
+            <h3>2. Limpeza e Preparação dos Dados</h3>
+            <p>Remoção de valores nulos e duplicados. Correção de dados inconsistentes. Conversão de tipos de dados (datas, números, etc.). Criação de colunas adicionais, como Receita Total (calculada multiplicando Quantidade por Valor).</p>
+            <h3>3. Análise Exploratória</h3>
+            <p>Criação de gráficos de barras para visualizar os produtos mais vendidos por categoria. Criação de gráficos de linha para visualizar a quantidade e o valor total vendido por categoria. Uso da segmentação de dados para selecionar a data desejada. Uso de cartão para mostrar valor total e ticket médio.</p>
+            <h3>4. Criação do Dashboard</h3>
+            <p>Importação dos dados para o Power BI. Transformação dos dados com Power Query e M Language. Criação de medidas DAX necessárias para a visualização. Criação de visualizações dinâmicas para monitorar o desempenho de vendas.</p>
+            <h3>5. Conclusão</h3>
+            <p>A categoria com mais produtos vendidos é a 'Eletrônicos'. A categoria com maior valor é a 'Roupas'. O estado com maior quantidade de vendas é o Rio de Janeiro.</p>
 
-        <h3>2. Limpeza e Preparação dos Dados</h3>
-        <ul>
-            <li>Remoção de valores nulos e duplicados.</li>
-            <li>Correção de dados inconsistentes.</li>
-            <li>Conversão de tipos de dados (datas, números, etc.).</li>
-            <li>Criação de colunas adicionais, como <code>Receita Total</code> (calculada multiplicando <code>Quantidade</code> por <code>Valor</code>).</li>
-        </ul>
-
-        <h3>3. Análise Exploratória</h3>
-        <ul>
-            <li>Criação de gráficos de barras para visualizar os produtos mais vendidos por categoria.</li>
-            <li>Criação de gráficos de linha para visualizar a quantidade e o valor total vendido por categoria.</li>
-            <li>Uso da segmentação de dados para selecionar a data desejada.</li>
-            <li>Uso de cartão para mostrar valor total e ticket médio.</li>
-        </ul>
-
-        <h3>4. Criação do Dashboard</h3>
-        <ul>
-            <li>Importação dos dados para o Power BI.</li>
-            <li>Transformação dos dados com Power Query e M Language.</li>
-            <li>Criação de medidas DAX necessárias para a visualização.</li>
-            <li>Criação de visualizações dinâmicas para monitorar o desempenho de vendas.</li>
-        </ul>
-
-        <h3>5. Conclusão</h3>
-        <ul>
-            <li>A categoria com mais produtos vendidos é a 'Eletrônicos'.</li>
-            <li>A categoria com maior valor é a 'Roupas'.</li>
-            <li>O estado com maior quantidade de vendas é o Rio de Janeiro.</li>
-        </ul>
-
-        <h2>Próximos Passos</h2>
-        <ul>
-            <li>Implementar um modelo preditivo para prever vendas futuras.</li>
-            <li>Expandir a análise para incluir dados de clientes.</li>
-        </ul>
-
-        <img src="images/projeto1.png" alt="Análise de Vendas">
+            <h2>Próximos Passos</h2>
+            <ul>
+                <li>Implementar um modelo preditivo para prever vendas futuras.</li>
+                <li>Expandir a análise para incluir dados de clientes.</li>
+            </ul>
+            
+            <a href="index.html" class="back-link">Voltar para a página inicial</a>
+        </div>
+        <div class="image-content">
+            <img src="images/projeto1.png" alt="Análise de Vendas">
+        </div>
     </div>
 </body>
 </html>
