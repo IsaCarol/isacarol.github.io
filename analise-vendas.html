@@ -6,21 +6,40 @@
     <title>Análise de Vendas</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
+            padding: 0;
+            background-color: #008080; /* Azul petróleo */
+            color: #fff; /* Cor do texto ajustada para contraste */
         }
         .container {
             max-width: 800px;
-            margin: auto;
-            background: #fff;
+            margin: 20px auto;
             padding: 20px;
+            background-color: #fff; /* Fundo branco para contraste */
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         h1 {
-            color: #333;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        h2, h3 {
+            font-size: 1.5em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        p, ul {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        a {
+            color: #00bcd4; /* Tom claro de azul para links */
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
         }
         img {
             max-width: 100%;
@@ -31,10 +50,68 @@
 </head>
 <body>
     <div class="container">
-        <h1>Projeto de Análise de Vendas</h1>
-        <p>Aqui estão os detalhes do projeto de análise de vendas.</p>
+        <h1>Projeto 1 - Análise de Vendas</h1>
+        <p>Este projeto tem como objetivo analisar os dados de vendas de uma empresa fictícia para identificar as principais tendências e oportunidades de mercado.</p>
+        
+        <h2>Objetivos</h2>
+        <ul>
+            <li>Analisar o desempenho de vendas ao longo do ano.</li>
+            <li>Identificar os produtos mais vendidos.</li>
+            <li>Sugerir estratégias de marketing com base nos dados.</li>
+        </ul>
+
+        <h2>Tecnologias Utilizadas</h2>
+        <ul>
+            <li><strong>Power BI</strong>: Para criação de dashboards interativos</li>
+            <li><strong>Power Query</strong>: Para transformação dos dados e utilização do editor avançado (M language), para adição de colunas e renomeação</li>
+            <li><strong>Excel</strong>: Para manipulação inicial dos dados</li>
+        </ul>
+
+        <h2>Passo a Passo</h2>
+        <h3>1. Coleta de Dados</h3>
+        <ul>
+            <li>Os dados com dados fictícios foram gerados com a ajuda do ChatGPT.</li>
+            <li>O arquivo CSV contém informações como: <code>Data da Venda</code>, <code>Produto</code>, <code>Quantidade</code>, <code>Valor</code>, <code>Estado</code>, <code>Categoria</code>.</li>
+        </ul>
+
+        <h3>2. Limpeza e Preparação dos Dados</h3>
+        <ul>
+            <li>Remoção de valores nulos e duplicados.</li>
+            <li>Correção de dados inconsistentes.</li>
+            <li>Conversão de tipos de dados (datas, números, etc.).</li>
+            <li>Criação de colunas adicionais, como <code>Receita Total</code> (calculada multiplicando <code>Quantidade</code> por <code>Valor</code>).</li>
+        </ul>
+
+        <h3>3. Análise Exploratória</h3>
+        <ul>
+            <li>Criação de gráficos de barras para visualizar os produtos mais vendidos por categoria.</li>
+            <li>Criação de gráficos de linha para visualizar a quantidade e o valor total vendido por categoria.</li>
+            <li>Uso da segmentação de dados para selecionar a data desejada.</li>
+            <li>Uso de cartão para mostrar valor total e ticket médio.</li>
+        </ul>
+
+        <h3>4. Criação do Dashboard</h3>
+        <ul>
+            <li>Importação dos dados para o Power BI.</li>
+            <li>Transformação dos dados com Power Query e M Language.</li>
+            <li>Criação de medidas DAX necessárias para a visualização.</li>
+            <li>Criação de visualizações dinâmicas para monitorar o desempenho de vendas.</li>
+        </ul>
+
+        <h3>5. Conclusão</h3>
+        <ul>
+            <li>A categoria com mais produtos vendidos é a 'Eletrônicos'.</li>
+            <li>A categoria com maior valor é a 'Roupas'.</li>
+            <li>O estado com maior quantidade de vendas é o Rio de Janeiro.</li>
+        </ul>
+
+        <h2>Próximos Passos</h2>
+        <ul>
+            <li>Implementar um modelo preditivo para prever vendas futuras.</li>
+            <li>Expandir a análise para incluir dados de clientes.</li>
+        </ul>
+
         <img src="images/projeto1.png" alt="Análise de Vendas">
-        <p>Descrição detalhada do projeto...</p>
     </div>
 </body>
 </html>
