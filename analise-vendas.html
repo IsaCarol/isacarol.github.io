@@ -3,114 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Relatório Análise de Vendas</title>
+    <title>Análise de Vendas 2.0</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #ffffff; /* Fundo branco */
-            color: #333333; /* Texto preto */
-        }
-        .header {
-            background-color: #343a40;
+            background-color: #22453a; /* Fundo principal */
             color: #fff;
+        }
+        header {
+            background-color: #22453a; /* Fundo do cabeçalho */
             padding: 20px;
             text-align: center;
+            border-bottom: 1px solid #1e3a2a;
+        }
+        h1, h2 {
+            color: #fff; /* Cor dos títulos */
+        }
+        h2 {
+            border-bottom: 2px solid #fff;
+            padding-bottom: 5px;
+        }
+        nav {
+            background-color: #1e3a2a; /* Fundo do menu */
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #1e3a2a;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            padding: 10px 20px;
+            background-color: #1f4a3d; /* Cor de fundo dos links */
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+        nav a:hover {
+            background-color: #1e5a4b; /* Cor de fundo dos links ao passar o mouse */
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
             padding: 20px;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background-color: #1e3a2a; /* Fundo da container */
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
         }
-        .text-content {
-            text-align: center; /* Centraliza o texto */
-            margin-bottom: 20px;
+        section {
+            margin-bottom: 30px;
         }
-        .text-content h1 {
-            color: #003358;
-        }
-        .text-content p {
-            font-size: 1.1em;
+        p {
+            color: #e0e0e0;
             line-height: 1.6;
         }
-        .text-content ul {
-            list-style: none;
-            padding: 0;
-        }
-        .text-content li {
-            margin: 10px 0;
-        }
-        .image-content {
-            text-align: center; /* Centraliza a imagem */
-        }
-        .image-content img {
-            max-width: 100%;
-            height: auto;
+        .code-block {
+            background-color: #2c4b3b;
+            padding: 15px;
             border-radius: 8px;
+            margin: 20px 0;
+            font-family: 'Courier New', Courier, monospace;
+            color: #e0e0e0;
+            overflow-x: auto;
         }
-        .back-link {
-            display: block;
-            margin-top: 20px;
+        footer {
             text-align: center;
-            font-size: 1.1em;
-            color: #007bff;
-            text-decoration: none;
-        }
-        .back-link:hover {
-            text-decoration: underline;
+            padding: 10px;
+            background-color: #1e3a2a;
+            border-top: 1px solid #1e3a2a;
+            color: #fff;
         }
     </style>
 </head>
 <body>
-    <header class="header">
-        <h1>Relatório Análise de Vendas</h1>
+    <header>
+        <h1>Análise de Vendas 2.0</h1>
+        <p>Bem-vindo(a) ao meu projeto de Análise de Vendas</p>
     </header>
+
+    <nav>
+        <a href="#banco-dados">Banco de Dados</a>
+        <a href="#modelagem">Modelagem</a>
+        <a href="#inserir-valores">Inserir Valores</a>
+        <a href="#calculos">Cálculos</a>
+        <a href="#bi">Ferramenta de BI</a>
+    </nav>
+
     <div class="container">
-        <div class="text-content">
-            <p>Aqui estão os detalhes do projeto de análise de vendas.</p>
-            <p><strong>Objetivo:</strong> Analisar os dados de vendas de uma empresa fictícia para identificar as principais tendências e oportunidades de mercado.</p>
-            
-            <h2>Objetivos</h2>
-            <ul>
-                <li>Analisar o desempenho de vendas ao longo do ano.</li>
-                <li>Identificar os produtos mais vendidos.</li>
-                <li>Sugerir estratégias de marketing com base nos dados.</li>
-            </ul>
+        <section id="banco-dados">
+            <h2>1º Passo - Banco de Dados</h2>
+            <p>Para a criação do banco de dados, optei por utilizar o "PostgreSQL" juntamente com a ferramenta "DBeaver".</p>
+        </section>
 
-            <h2>Tecnologias Utilizadas</h2>
-            <ul>
-                <li>Power BI: Para criação de dashboards interativos</li>
-                <li>Power Query: Para transformação dos dados e utilização do editor avançado (M language), para adição de colunas e renomeação</li>
-                <li>Excel: Para manipulação inicial dos dados</li>
-            </ul>
+        <section id="modelagem">
+            <h2>2º Passo - Modelagem</h2>
+            <p>Para dar início às modelagens, comecei pela modelagem de dados conceitual em um bloco de notas comum, onde escrevi em forma de tópicos o que seria necessário, pensando nos requisitos de negócios que gostaria de analisar e o que seria interessante visualizar.</p>
+            <p>Após fazer o modelo conceitual, utilizei o DrawSQL, uma plataforma online, para montar meu modelo lógico, montando a tabela fato e as dimensões, adicionando as métricas fundamentais em cada uma, fazendo todo relacionamento necessário entre as tabelas. Ao finalizar o modelo lógico, a plataforma "DrawSQL" permite fazer a exportação do arquivo para MySQL, PostgreSQL, etc. Baixei o arquivo do modelo lógico e o executei no Visual Studio Code, já integrado com meu banco de dados.</p>
+            <div class="code-block">
+                <p>Veja o exemplo do script SQL:</p>
+                <pre>
+CREATE TABLE FT_VENDAS (
+    ID_VENDA SERIAL PRIMARY KEY,
+    DATA_VENDA DATE,
+    ID_PRODUTO INT,
+    ID_CLIENTE INT,
+    QUANTIDADE INT,
+    VALOR_TOTAL DECIMAL
+);
+                </pre>
+            </div>
+        </section>
 
-            <h2>Passo a Passo</h2>
-            <h3>1. Coleta de Dados</h3>
-            <p>Os dados com dados fictícios foram gerados com a ajuda do ChatGPT. O arquivo CSV contém informações como: Data da Venda, Produto, Quantidade, Valor, Estado, Categoria.</p>
-            <h3>2. Limpeza e Preparação dos Dados</h3>
-            <p>Remoção de valores nulos e duplicados. Correção de dados inconsistentes. Conversão de tipos de dados (datas, números, etc.). Criação de colunas adicionais, como Receita Total (calculada multiplicando Quantidade por Valor).</p>
-            <h3>3. Análise Exploratória</h3>
-            <p>Criação de gráficos de barras para visualizar os produtos mais vendidos por categoria. Criação de gráficos de linha para visualizar a quantidade e o valor total vendido por categoria. Uso da segmentação de dados para selecionar a data desejada. Uso de cartão para mostrar valor total e ticket médio.</p>
-            <h3>4. Criação do Dashboard</h3>
-            <p>Importação dos dados para o Power BI. Transformação dos dados com Power Query e M Language. Criação de medidas DAX necessárias para a visualização. Criação de visualizações dinâmicas para monitorar o desempenho de vendas.</p>
-            <h3>5. Conclusão</h3>
-            <p>A categoria com mais produtos vendidos é a 'Eletrônicos'. A categoria com maior valor é a 'Roupas'. O estado com maior quantidade de vendas é o Rio de Janeiro.</p>
+        <section id="inserir-valores">
+            <h2>3º Passo - Inserir Valores</h2>
+            <p>Para automatizar a inserção de valores nas tabelas, utilizei um script Python que inseriu dados fictícios no banco de dados. Esse script continha as informações de conexão ao banco e os comandos necessários para popular as tabelas.</p>
+            <div class="code-block">
+                <p>Veja o exemplo do script Python:</p>
+                <pre>
+import psycopg2
 
-            <h2>Próximos Passos</h2>
+def inserir_dados():
+    conexao = psycopg2.connect(
+        dbname="vendas_db", user="usuario", password="senha", host="localhost"
+    )
+    cursor = conexao.cursor()
+
+    cursor.execute("INSERT INTO FT_VENDAS (DATA_VENDA, ID_PRODUTO, ID_CLIENTE, QUANTIDADE, VALOR_TOTAL) VALUES (%s, %s, %s, %s, %s)", (data_venda, id_produto, id_cliente, quantidade, valor_total))
+
+    conexao.commit()
+    cursor.close()
+    conexao.close()
+
+inserir_dados()
+                </pre>
+            </div>
+        </section>
+
+        <section id="calculos">
+            <h2>4º Passo - Cálculos</h2>
+            <p>Minha tabela FT_VENDAS necessitava de uma coluna que mostrasse o valor total de vendas. No DBeaver, criei um script SQL que adicionou essa coluna e atualizou os valores, realizando um <i>JOIN</i> entre as tabelas de produtos e vendas.</p>
+            <div class="code-block">
+                <p>Veja o exemplo do script SQL:</p>
+                <pre>
+ALTER TABLE FT_VENDAS ADD COLUMN VALOR_TOTAL DECIMAL;
+UPDATE FT_VENDAS 
+SET VALOR_TOTAL = QUANTIDADE * (SELECT PRECO_UNITARIO FROM PRODUTOS WHERE ID_PRODUTO = FT_VENDAS.ID_PRODUTO);
+                </pre>
+            </div>
+        </section>
+
+        <section id="bi">
+            <h2>5º Passo - Ferramenta de BI</h2>
+            <p>Para realizar as análises e montar os relatórios, utilizei o Microsoft Power BI. Integrei meu banco de dados PostgreSQL ao Power BI para que qualquer modificação fosse atualizada automaticamente nos relatórios.</p>
+        </section>
+
+        <section id="requisitos-negocio">
+            <h2>Requisitos de Negócio</h2>
             <ul>
-                <li>Implementar um modelo preditivo para prever vendas futuras.</li>
-                <li>Expandir a análise para incluir dados de clientes.</li>
+                <li>Análise de Desempenho de Produtos</li>
+                <li>Análise de Desempenho de Vendedores</li>
+                <li>Análise Perfil do Cliente</li>
+                <li>Análise de Canais de Venda</li>
+                <li>Análise Temporal de Vendas</li>
             </ul>
-            
-            
-        </div>
-        <div class="image-content">
-            <img src="images/projeto1.png" alt="Análise de Vendas">
-        </div>
+        </section>
+
+        <section id="links">
+            <h2>Links dos Arquivos</h2>
+            <ul>
+                <li><a href="images/analiseproduto.png">Análise de Desempenho de Produtos</a></li>
+                <li><a href="images/analisetempo.png">Análise Temporal de Vendas</a></li>
+                <li><a href="images/analisevendedor.png">Análise de Desempenho de Vendedores</a></li>
+                <li><a href="images/analisecliente.pgn">Análise Perfil do Cliente</a></li>
+            </ul>
+        </section>
     </div>
+
+    <footer>
+        <p>&copy; 2024 Isabeli Carolina dos Santos</p>
+    </footer>
 </body>
 </html>
