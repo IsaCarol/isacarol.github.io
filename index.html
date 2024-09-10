@@ -11,20 +11,20 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #1e1e2f;
+            background-color: #22453a; /* Novo fundo */
             color: #fff;
         }
         header {
-            background-color: #1f1f2e;
+            background-color: #1d3a1b; /* Cor um pouco mais escura para o cabeçalho */
             padding: 20px;
             text-align: center;
-            border-bottom: 1px solid #444;
+            border-bottom: 1px solid #1b2e1b;
         }
         nav {
-            background-color: #29293d;
+            background-color: #1b2e1b; /* Cor de fundo do menu */
             padding: 10px;
             text-align: center;
-            border-bottom: 1px solid #444;
+            border-bottom: 1px solid #1b2e1b;
         }
         nav a {
             color: #fff;
@@ -32,18 +32,18 @@
             margin: 0 15px;
             font-weight: bold;
             padding: 10px 20px;
-            background-color: #2d2d44;
+            background-color: #2c4a37; /* Cor de fundo dos links */
             border-radius: 8px;
             transition: background 0.3s;
         }
         nav a:hover {
-            background-color: #3a3a5b;
+            background-color: #3b5c46; /* Cor de fundo dos links ao passar o mouse */
         }
         .container {
             display: flex;
             max-width: 1200px;
             margin: 20px auto;
-            background-color: #29293d;
+            background-color: #1d3a1b; /* Cor de fundo da container */
             border-radius: 12px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
             overflow: hidden;
@@ -51,34 +51,37 @@
         .left-column {
             width: 30%;
             padding: 30px;
-            background-color: #1f1f2e;
+            background-color: #1b2e1b; /* Cor de fundo da coluna esquerda */
             text-align: center;
-            border-right: 1px solid #444;
+            border-right: 1px solid #1b2e1b;
         }
         .left-column img {
             border-radius: 50%;
             max-width: 120px;
             margin-bottom: 20px;
-            border: 3px solid #3a3a5b;
+            border: 3px solid #3a5d3f; /* Cor da borda da imagem */
         }
         .left-column h2 {
-            color: #f1c40f;
+            color: #f1c40f; /* Cor dos títulos */
             margin: 10px 0;
         }
         .left-column .contact-info a {
             display: block;
             margin: 10px 0;
-            color: #f1c40f;
+            color: #f1c40f; /* Cor dos links de contato */
             text-decoration: none;
             font-weight: bold;
+        }
+        .left-column .contact-info a:hover {
+            text-decoration: underline;
         }
         .right-column {
             width: 70%;
             padding: 30px;
-            background-color: #29293d;
+            background-color: #1d3a1b; /* Cor de fundo da coluna direita */
         }
         .right-column h2 {
-            color: #f1c40f;
+            color: #f1c40f; /* Cor dos títulos na coluna direita */
             margin-bottom: 15px;
             border-bottom: 2px solid #f1c40f;
             padding-bottom: 5px;
@@ -103,7 +106,7 @@
             display: flex;
             align-items: center;
             margin-bottom: 15px;
-            background-color: #1f1f2e;
+            background-color: #1b2e1b;
             padding: 10px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -121,9 +124,9 @@
         <h1>Portfólio de Isabeli Carolina dos Santos</h1>
     </header>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="projetos.html">Projetos</a>
-        <a href="curriculo.html">Currículo</a>
+        <a href="#sobre-mim">Sobre Mim</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#curriculo">Currículo</a>
     </nav>
     <div class="container">
         <!-- Coluna Esquerda -->
