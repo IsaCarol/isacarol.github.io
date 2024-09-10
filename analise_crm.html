@@ -123,10 +123,6 @@
             <p>Para dar início às modelagens, comecei pela modelagem de dados conceitual em um bloco de notas comum, onde escrevi em forma de tópicos o que seria necessário, pensando nos requisitos de negócios que gostaria de analisar e o que seria interessante visualizar.</p>
             <p>Após fazer o modelo conceitual, utilizei o DrawSQL, uma plataforma online, para montar meu modelo lógico, montando a tabela fato e as dimensões, adicionando as métricas fundamentais em cada uma, fazendo todo relacionamento necessário entre as tabelas. Ao finalizar o modelo lógico, a plataforma "DrawSQL" permite fazer a exportação do arquivo para MySQL, PostgreSQL, etc. Baixei o arquivo do modelo lógico e o executei no Visual Studio Code, já integrado com meu banco de dados.</p>
             <p>Para acessar a ferramenta DrawSQL, clique <a class="external-link" href="https://drawsql.app/" target="_blank">aqui</a>.</p>
-            <div class="image-container">
-                <img src="images/modelagem-dados.png" alt="Modelagem de Dados">
-                <p>Modelo lógico criado com a ferramenta DrawSQL.</p>
-            </div>
         </section>
 
         <section id="inserir-valores">
@@ -172,46 +168,7 @@ SET VALOR_TOTAL = QUANTIDADE * (SELECT PRECO_UNITARIO FROM PRODUTOS WHERE ID_PRO
             <p>Para realizar as análises e montar os relatórios, utilizei o Microsoft Power BI. Integrei meu banco de dados PostgreSQL ao Power BI para que qualquer modificação fosse atualizada automaticamente nos relatórios.</p>
         </section>
 
-        <section id="crm">
-            <h2>Análise de Dados CRM</h2>
-            <p>Este projeto tem como objetivo fazer análise de dados fictícios de um CRM de uma empresa também fictícia. Para a realização dessa análise, tive alguns passos a realizar.</p>
-
-            <h3>1º Passo</h3>
-            <p>Para dar início à construção do projeto, primeiramente fiz a modelagem lógica de como eu queria a estrutura dos dados. Para isso, utilizei a ferramenta <a class="external-link" href="https://drawsql.app/" target="_blank">DrawSQL</a>.</p>
-            <div class="image-container">
-                <img src="images/modelagem-crm.png" alt="Modelagem CRM">
-                <p>Modelagem lógica do CRM.</p>
-            </div>
-
-            <h3>2º Passo</h3>
-            <p>No segundo passo, realizei a criação das tabelas no banco de dados PostgreSQL, utilizando o DBeaver como auxiliador.</p>
-            <div class="image-container">
-                <img src="images/crm-tabelas.png" alt="Criação de Tabelas CRM">
-                <p>Criação das tabelas no PostgreSQL.</p>
-            </div>
-
-            <h3>3º Passo</h3>
-            <p>Para popular as tabelas e não fazer isso manualmente, utilizei um script Python para automatizar a tarefa.</p>
-            <div class="image-container">
-                <img src="images/script-python.png" alt="Script Python CRM">
-                <p>Script Python para inserção de dados no CRM.</p>
-            </div>
-
-            <h3>4º Passo</h3>
-            <p>Após ter todos os dados necessários em todas as tabelas, fiz a conexão do Power BI no banco de dados para ter acesso às tabelas, fiz o carregamento e a transformação dos dados que achei necessária.</p>
-            <div class="image-container">
-                <img src="images/powerbi-conexao.png" alt="Conexão Power BI">
-                <p>Conexão do Power BI com o banco de dados CRM.</p>
-            </div>
-
-            <h3>5º Passo</h3>
-            <p>Por fim, realizei a análise dos dados, observando os Leads, Interações realizadas, Clientes e por fim as Vendas realizadas. Foi adicionada também uma página de navegação inicial, e botões em cada página do projeto para facilitar a navegação.</p>
-            <div class="image-container">
-                <img src="images/crm-analise.png" alt="Análise CRM">
-                <p>Visão geral da análise CRM.</p>
-            </div>
-        </section>
-
+        
         <section id="links">
             <h2>Links dos Arquivos</h2>
             <div class="image-container">
