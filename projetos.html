@@ -11,20 +11,20 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #1e1e2f;
+            background-color: #22453a; /* Fundo principal */
             color: #fff;
         }
         header {
-            background-color: #1f1f2e;
+            background-color: #22453a; /* Fundo do cabeçalho */
             padding: 20px;
             text-align: center;
-            border-bottom: 1px solid #444;
+            border-bottom: 1px solid #1e3a2a;
         }
         nav {
-            background-color: #29293d;
+            background-color: #1e3a2a; /* Fundo do menu */
             padding: 10px;
             text-align: center;
-            border-bottom: 1px solid #444;
+            border-bottom: 1px solid #1e3a2a;
         }
         nav a {
             color: #fff;
@@ -32,29 +32,64 @@
             margin: 0 15px;
             font-weight: bold;
             padding: 10px 20px;
-            background-color: #2d2d44;
+            background-color: #1f4a3d; /* Cor de fundo dos links */
             border-radius: 8px;
             transition: background 0.3s;
         }
         nav a:hover {
-            background-color: #3a3a5b;
+            background-color: #1e5a4b; /* Cor de fundo dos links ao passar o mouse */
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
             padding: 30px;
-            background-color: #29293d;
+            background-color: #22453a; /* Cor de fundo da container */
             border-radius: 12px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
         }
         h2 {
-            color: #f1c40f;
+            color: #fff; /* Cor dos títulos */
             margin-bottom: 15px;
             border-bottom: 2px solid #f1c40f;
             padding-bottom: 5px;
         }
         p {
             color: #e0e0e0;
+        }
+        .project-list {
+            list-style: none;
+            padding: 0;
+        }
+        .project-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            background-color: #1e3a2a;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s;
+        }
+        .project-list li:hover {
+            background-color: #1f4a3d; /* Cor de fundo ao passar o mouse */
+        }
+        .project-list li i {
+            font-size: 2em;
+            color: #f1c40f; /* Cor dos ícones */
+            margin-right: 15px;
+        }
+        .project-list li a {
+            color: #f1c40f;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .project-list li a:hover {
+            text-decoration: underline;
+        }
+        .project-list li .description {
+            color: #e0e0e0;
+            margin-top: 5px;
         }
     </style>
 </head>
@@ -67,11 +102,36 @@
         <a href="curriculo.html">Currículo</a>
     </nav>
     <div class="container">
-       <ul class="project-list">
-            <li><a href="analise-vendas.html">Análise de Vendas</a></li>
-            <li><a href="analise_financeira.html">Análise Financeira</a></li>
-            <li><a href="analise_crm.html">Análise de Dados CRM</a></li>
-            <li><a href="analise_marketing.html">Análise de Dados Marketing</a></li>
+        <h2>Meus Projetos</h2>
+        <ul class="project-list">
+            <li>
+                <i class="fas fa-chart-line"></i>
+                <div>
+                    <a href="analise-vendas.html">Análise de Vendas</a>
+                    <p class="description">Desenvolvimento de dashboards para monitorar e otimizar as estratégias de vendas, identificando tendências e oportunidades.</p>
+                </div>
+            </li>
+            <li>
+                <i class="fas fa-money-bill-wave"></i>
+                <div>
+                    <a href="analise_financeira.html">Análise Financeira</a>
+                    <p class="description">Criação de relatórios financeiros para análise de performance, controle de despesas e planejamento orçamentário.</p>
+                </div>
+            </li>
+            <li>
+                <i class="fas fa-users"></i>
+                <div>
+                    <a href="analise_crm.html">Análise de Dados CRM</a>
+                    <p class="description">Análise de dados de CRM para entender o comportamento do cliente e melhorar estratégias de retenção e aquisição.</p>
+                </div>
+            </li>
+            <li>
+                <i class="fas fa-bullhorn"></i>
+                <div>
+                    <a href="analise_marketing.html">Análise de Dados Marketing</a>
+                    <p class="description">Avaliação de dados de campanhas de marketing para otimizar ROI e ajustar estratégias de mercado.</p>
+                </div>
+            </li>
         </ul>
     </div>
 </body>
