@@ -34,156 +34,101 @@
         nav a:hover {
             text-decoration: underline;
         }
-        .main-content {
+        .container {
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
             max-width: 1200px;
             margin: 20px auto;
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
-        .left-column, .right-column {
-            flex: 1;
-            margin: 10px;
-        }
         .left-column {
+            width: 40%;
             padding: 20px;
+            border-right: 1px solid #ddd;
+            text-align: center;
         }
-        .right-column {
-            padding: 20px;
-            border-left: 1px solid #ddd;
-        }
-        .profile img {
+        .left-column img {
             border-radius: 50%;
             max-width: 150px;
             height: auto;
+            margin-bottom: 20px;
+        }
+        .left-column h2 {
+            color: #007bff;
+            margin: 10px 0;
+        }
+        .left-column .contact-info {
+            margin-top: 20px;
+        }
+        .left-column .contact-info a {
             display: block;
-            margin: 0 auto 20px;
+            margin: 10px 0;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
         }
-        h1, h2 {
-            color: #003358;
+        .left-column .contact-info a:hover {
+            text-decoration: underline;
         }
-        h1 {
-            margin-bottom: 10px;
+        .right-column {
+            width: 60%;
+            padding: 20px;
         }
-        h2 {
-            font-size: 1.5em;
+        .right-column h2 {
+            color: #007bff;
             margin-bottom: 15px;
         }
-        p, ul {
-            font-size: 1em;
-            line-height: 1.6;
-        }
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .project-list {
-            list-style: none;
-            padding: 0;
-        }
-        .project-list li {
+        .right-column p {
             margin: 10px 0;
         }
-        .contact-info {
-            margin-top: 20px;
-        }
-        .contact-info a {
-            display: inline-flex;
-            align-items: center;
-            margin: 10px 0;
-            text-decoration: none;
-            color: #007bff;
-        }
-        .contact-info i {
-            margin-right: 8px;
+        .icon {
             font-size: 1.2em;
-        }
-        .back-link {
-            display: block;
-            margin-top: 20px;
-            text-align: center;
-            font-size: 1.1em;
+            margin-right: 8px;
             color: #007bff;
-            text-decoration: none;
         }
-        .back-link:hover {
-            text-decoration: underline;
+        .section {
+            margin-bottom: 30px;
+        }
+        .section p {
+            margin-bottom: 15px;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Portfólio</h1>
-        <p>Bem-vindo ao meu portfólio de Análise de Dados</p>
+        <h1>Portfólio de Isabeli Carolina dos Santos</h1>
     </header>
     <nav>
-        <a href="index.html">Início</a>
-        <a href="sobre.html">Sobre Mim</a>
-        <a href="projetos.html">Projetos</a>
-        <a href="contato.html">Contato</a>
+        <a href="#sobre-mim">Sobre Mim</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#curriculo">Currículo</a>
     </nav>
-    <div class="main-content">
+    <div class="container">
         <!-- Coluna Esquerda -->
         <div class="left-column">
-            <div class="profile">
-                <img src="images/eu.jpeg" alt="Sua Foto">
-                <h2>Sobre Mim</h2>
-                <p><strong>Isabeli Carolina dos Santos</strong></p>
-                <p><strong>Objetivo:</strong> Conquistar uma oportunidade na área de dados. Motivado a aplicar habilidades em análise estatística, visualização de dados e ferramentas de BI, contribuindo com soluções inovadoras, enquanto continuo a desenvolver minhas habilidades e conhecimento.</p>
-                
-                <h2>Experiência</h2>
-                <p><strong>Usina de Açúcar Santa Terezinha, Maringá</strong> — Auxiliar de Entomologia (Fev 2022 - Jun 2022)</p>
-                <p><strong>Bellinati Perez, Maringá</strong> — Negociador de Cobrança (Dez 2023 - Mar 2024)</p>
-
-                <h2>Formação</h2>
-                <p><strong>Análise e Desenvolvimento de Sistemas</strong>, UniFatecie (Mar 2023 - Jun 2025)</p>
-                <p><strong>Engenharia Química</strong>, UEM (Trancado)</p>
-                <p><strong>Formação de Docentes</strong>, Colégio Estadual James Patrick Clark (Fev 2018 - Dez 2021)</p>
-
-                <h2>Conhecimentos</h2>
-                <p>Python, SQL, NoSQL, R, Power BI, Tableau, MySQL, PostgreSQL</p>
-                <p>Banco de Dados, Machine Learning, Linux, Pandas, NumPy, Seaborn</p>
-                <p>Excel, Google Analytics, GitHub, T-SQL, Data Warehouse, SCRUM</p>
-                <p>Kanban, PySpark, Athena, ETL, DataLake</p>
-
-                <h2>Cursos</h2>
-                <p>Ciências de Dados - Udemy - 60 Horas</p>
-                <p>Banco de dados - Udemy - 60 Horas</p>
-                <p>Fundamentos de BI - DIO - 10 Horas</p>
-                <p>Python Básico - Fundação Bradesco - 18 Horas</p>
-                <p>Estatística - Udemy - 60 Horas</p>
-
-                <h2>Idiomas</h2>
-                <p>Inglês Intermediário - CCAA (2021 - 2022)</p>
-
-                <h2>Habilidades</h2>
-                <p>Constante aprendizado, Escuta ativa, Comunicação assertiva, Facilidade de trabalhar em grupo, Organização, Proatividade, Capacidade analítica, Fácil adaptação</p>
-
-                <div class="contact-info">
-                    <h2>Contato</h2>
-                    <p>Maringá, PR</p>
-                    <p>+55 44 99929-7235</p>
-                    <p><a href="mailto:isacaroltr@gmail.com"><i class="fas fa-envelope"></i> Gmail</a></p>
-                    <p><a href="https://www.linkedin.com/in/isabeli-carolina-066780210/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></p>
-                    <p><a href="https://www.instagram.com/seu_usuario/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></p>
-                </div>
+            <img src="images/eu.jpeg" alt="Sua Foto">
+            <h2>Analista de Dados</h2>
+            <div class="contact-info">
+                <a href="mailto:isacaroltr@gmail.com"><i class="fas fa-envelope icon"></i>Email</a>
+                <a href="https://www.linkedin.com/in/isabeli-carolina-066780210/" target="_blank"><i class="fab fa-linkedin icon"></i>LinkedIn</a>
+                <a href="tel:+5544999297235"><i class="fas fa-phone icon"></i>+55 44 99929-7235</a>
             </div>
         </div>
 
         <!-- Coluna Direita -->
         <div class="right-column">
-            <h2>Projetos</h2>
-            <ul class="project-list">
-                <li><a href="analise-vendas.html">Relatório Análise de Vendas</a> - Uma visão detalhada das tendências de vendas e desempenho de produtos.</li>
-                <li><a href="link_para_projeto2.html">Dashboard de Marketing</a> - Monitoramento e análise das campanhas de marketing.</li>
-                <li><a href="link_para_projeto3.html">Relatório Financeiro</a> - Análise abrangente dos dados financeiros e relatórios.</li>
-            </ul>
+            <div class="section" id="sobre-mim">
+                <h2>Sobre Mim</h2>
+                <p>Sou Isabeli Carolina dos Santos, uma Analista de Dados apaixonada por transformar dados em insights acionáveis e estratégias de negócios bem-sucedidas.</p>
+            </div>
+
+            <div class="section">
+                <h2>O que eu faço</h2>
+                <p><i class="fas fa-chart-line icon"></i><strong>Análise de Dados:</strong> Analiso grandes volumes de dados para identificar tendências e fornecer recomendações estratégicas.</p>
+                <p><i class="fas fa-cogs icon"></i><strong>Business Intelligence:</strong> Utilizo ferramentas de BI para criar relatórios e dashboards interativos que facilitam a tomada de decisões.</p>
+                <p><i class="fas fa-eye icon"></i><strong>Data Visualization:</strong> Desenvolvo visualizações de dados claras e impactantes para ajudar a comunicar insights de forma eficaz.</p>
+            </div>
         </div>
     </div>
 </body>
