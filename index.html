@@ -9,8 +9,8 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #003358; /* Azul petróleo escuro */
-            color: #ffffff; /* Texto branco */
+            background-color: #ffffff; /* Fundo branco */
+            color: #333333; /* Texto preto */
         }
         .header {
             background-color: #343a40;
@@ -18,18 +18,52 @@
             padding: 20px;
             text-align: center;
         }
-        .container {
-            max-width: 800px;
+        .main-content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            max-width: 1200px;
             margin: 20px auto;
-            padding: 20px;
-            background-color: #ffffff;
-            color: #000000;
+        }
+        .left-column, .right-column {
+            flex: 1;
+            margin: 10px;
+        }
+        .left-column {
+            padding: 0;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
+        .left-column .header-bar {
+            background-color: #d3e0ff; /* Azul claro */
+            padding: 10px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+            color: #003358;
+        }
+        .left-column .profile {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 0 0 8px 8px;
+            color: #000000;
+            font-size: 0.9em; /* Texto menor */
+        }
+        .right-column {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #003358;
+        }
         h1 {
-            font-size: 2em;
             margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 1.5em;
+            text-align: center;
+            margin-bottom: 15px;
         }
         p, ul {
             font-size: 1.1em;
@@ -43,33 +77,19 @@
         a:hover {
             text-decoration: underline;
         }
-        .profile {
-            text-align: center;
-            margin-bottom: 30px;
-        }
         .profile img {
             border-radius: 50%;
             max-width: 150px;
             height: auto;
-        }
-        .resume-link {
             display: block;
-            margin-top: 10px;
-            font-size: 1.1em;
-            text-align: center;
-            color: #007bff;
-            text-decoration: none;
-            font-weight: bold;
+            margin: 0 auto;
         }
-        .resume-link:hover {
-            text-decoration: underline;
+        .project-list {
+            list-style: none;
+            padding: 0;
         }
-        .section {
-            margin-top: 20px;
-        }
-        .section h2 {
-            font-size: 1.5em;
-            color: #003358;
+        .project-list li {
+            margin: 10px 0;
         }
         .back-link {
             display: block;
@@ -87,91 +107,68 @@
 <body>
     <header class="header">
         <h1>Portfólio de Power BI</h1>
-        <p>Bem-vindo ao meu perfil</p>
+        <p>Bem-vindo ao meu porfólio de Análise de Dados</p>
     </header>
-    <div class="container">
-        <div class="profile">
-            <img src="images/eu.jpeg" alt="Sua Foto">
-            <p><strong>Isabeli Carolina dos Santos</strong></p>
-            <p>Maringá, PR | +55 44 99929-7235 | isacaroltr@gmail.com</p>
-            <p><a href="https://linkedin.com/in/isabeli-carolina-066780210/" class="resume-link" target="_blank">LinkedIn</a></p>
-            <a href="path/to/your-resume.pdf" class="resume-link" target="_blank">Baixar Currículo</a>
+    <div class="main-content">
+        <!-- Coluna Esquerda -->
+        <div class="left-column">
+            <div class="header-bar">
+                <h2>Sobre Mim</h2>
+            </div>
+            <div class="profile">
+                <img src="images/eu.jpeg" alt="Sua Foto">
+                <p><strong>Isabeli Carolina dos Santos</strong></p>
+                <p><strong>Objetivo:</strong> Conquistar uma oportunidade na área de dados. Motivado a aplicar habilidades em análise estatística, visualização de dados e ferramentas de BI, contribuindo com soluções inovadoras, enquanto continuo a desenvolver minhas habilidades e conhecimento.</p>
+                
+                <h2>Experiência</h2>
+                <p><strong>Usina de Açúcar Santa Terezinha, Maringá</strong> — Auxiliar de Entomologia (Fev 2022 - Jun 2022)</p>
+                <p><strong>Bellinati Perez, Maringá</strong> — Negociador de Cobrança (Dez 2023 - Mar 2024)</p>
+
+                <h2>Formação</h2>
+                <p><strong>Análise e Desenvolvimento de Sistemas</strong>, UniFatecie (Mar 2023 - Jun 2025)</p>
+                <p><strong>Engenharia Química</strong>, UEM (Trancado)</p>
+                <p><strong>Formação de Docentes</strong>, Colégio Estadual James Patrick Clark (Fev 2018 - Dez 2021)</p>
+
+                <h2>Conhecimentos</h2>
+                <p>Python, SQL, NoSQL, R, Power BI, Tableau, MySQL, PostgreSQL</p>
+                <p>Banco de Dados, Machine Learning, Linux, Pandas, NumPy, Seaborn</p>
+                <p>Excel, Google Analytics, GitHub, T-SQL, Data Warehouse, SCRUM</p>
+                <p>Kanban, PySpark, Athena, ETL, DataLake</p>
+
+                <h2>Cursos</h2>
+                <p>Ciências de Dados - Udemy - 60 Horas</p>
+                <p>Banco de dados - Udemy - 60 Horas</p>
+                <p>Fundamentos de BI - DIO - 10 Horas</p>
+                <p>Python Básico - Fundação Bradesco - 18 Horas</p>
+                <p>Estatística - Udemy - 60 Horas</p>
+
+                <h2>Idiomas</h2>
+                <p>Inglês Intermediário - CCAA (2021 - 2022)</p>
+
+                <h2>Habilidades</h2>
+                <p>Constante aprendizado, Escuta ativa, Comunicação assertiva, Facilidade de trabalhar em grupo, Organização, Proatividade, Capacidade analítica, Fácil adaptação</p>
+
+                <p><strong>Contato:</strong></p>
+                <p>Maringá, PR</p>
+                <p>+55 44 99929-7235</p>
+                <p><a href="mailto:isacaroltr@gmail.com">isacaroltr@gmail.com</a></p>
+                <p><a href="https://www.linkedin.com/in/isabeli-carolina-066780210/" target="_blank">LinkedIn</a></p>
+            </div>
         </div>
 
-        <div class="section">
-            <h2>Sobre Mim</h2>
-            <p>Meu objetivo é conquistar uma oportunidade na área de dados. Motivado a aplicar habilidades em análise estatística, visualização de dados e ferramentas de BI, contribuindo com soluções inovadoras, enquanto continuo a desenvolver minhas habilidades e conhecimento.</p>
-        </div>
+        <!-- Coluna Direita -->
+        <div class="right-column">
+            <div class="section">
+                <h2>Projetos</h2>
+                <ul class="project-list">
+                    <li><a href="analise-vendas.html">Relatório Análise de Vendas</a> - Uma visão detalhada das tendências de vendas e desempenho de produtos.</li>
+                    <li><a href="link_para_projeto2.html">Dashboard de Marketing</a> - Monitoramento e análise das campanhas de marketing.</li>
+                    <li><a href="link_para_projeto3.html">Relatório Financeiro</a> - Análise abrangente dos dados financeiros e relatórios.</li>
+                </ul>
+            </div>
 
-        <div class="section">
-            <h2>Experiência</h2>
-            <ul>
-                <li><strong>Usina de Açúcar Santa Terezinha, Maringá</strong> — Auxiliar de Entomologia (Fev 2022 - Jun 2022)</li>
-                <li><strong>Bellinati Perez, Maringá</strong> — Negociador de Cobrança (Dez 2023 - Mar 2024)</li>
-            </ul>
+            <a href="index.html" class="back-link">Voltar para a página inicial</a>
         </div>
-
-        <div class="section">
-            <h2>Formação</h2>
-            <ul>
-                <li><strong>Análise e Desenvolvimento de Sistemas</strong>, UniFatecie (Mar 2023 - Jun 2025)</li>
-                <li><strong>Engenharia Química</strong>, UEM (Trancado)</li>
-                <li><strong>Formação de Docentes</strong>, Colégio Estadual James Patrick Clark (Fev 2018 - Dez 2021)</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Conhecimentos</h2>
-            <ul>
-                <li>Python, SQL, NoSQL, R, Power BI, Tableau, MySQL, PostgreSQL</li>
-                <li>Banco de Dados, Machine Learning, Linux, Pandas, NumPy, Seaborn</li>
-                <li>Excel, Google Analytics, GitHub, T-SQL, Data Warehouse, SCRUM</li>
-                <li>Kanban, PySpark, Athena, ETL, DataLake</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Cursos</h2>
-            <ul>
-                <li><strong>Ciências de Dados</strong> - Udemy - 60 Horas</li>
-                <li><strong>Banco de dados</strong> - Udemy - 60 Horas</li>
-                <li><strong>Fundamentos de BI</strong> - DIO - 10 Horas</li>
-                <li><strong>Python Básico</strong> - Fundação Bradesco - 18 Horas</li>
-                <li><strong>Estatística</strong> - Udemy - 60 Horas</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Idiomas</h2>
-            <ul>
-                <li><strong>Inglês Intermediário</strong> - CCAA (2021 - 2022)</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Habilidades</h2>
-            <ul>
-                <li>Constante aprendizado</li>
-                <li>Escuta ativa</li>
-                <li>Comunicação assertiva</li>
-                <li>Facilidade de trabalhar em grupo</li>
-                <li>Organização</li>
-                <li>Proatividade</li>
-                <li>Capacidade analítica</li>
-                <li>Fácil adaptação</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Projetos</h2>
-            <ul class="project-list">
-                <li><a href="analise-vendas.html">Relatório Análise de Vendas</a> - Uma visão detalhada das tendências de vendas e desempenho de produtos.</li>
-                <li><a href="link_para_projeto2.html">Dashboard de Marketing</a> - Monitoramento e análise das campanhas de marketing.</li>
-                <li><a href="link_para_projeto3.html">Relatório Financeiro</a> - Análise abrangente dos dados financeiros e relatórios.</li>
-            </ul>
-        </div>
-
-        <a href="index.html" class="back-link">Voltar para a página inicial</a>
     </div>
 </body>
 </html>
