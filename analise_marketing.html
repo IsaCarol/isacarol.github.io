@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise de Campanhas de Marketing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #22453a; /* Fundo principal */
+            color: #fff;
+        }
+        header {
+            background-color: #22453a; /* Fundo do cabeçalho */
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #1e3a2a;
+        }
+        h1, h2 {
+            color: #fff; /* Cor dos títulos */
+        }
+        h2 {
+            border-bottom: 2px solid #fff;
+            padding-bottom: 5px;
+        }
+        .section {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 1200px;
+            background-color: #1e3a2a; /* Fundo da seção */
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+        p {
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+        .code-block {
+            background-color: #2c4b3b;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-family: 'Courier New', Courier, monospace;
+            color: #e0e0e0;
+            overflow-x: auto;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #1e3a2a;
+            border-top: 1px solid #1e3a2a;
+            color: #fff;
+        }
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+        .external-link {
+            color: #1e90ff; /* Cor para links externos */
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .external-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Análise de Campanhas de Marketing</h1>
+        <p>Bem-vindo(a) ao relatório de análise de campanhas de marketing</p>
+    </header>
+
+    <section id="analise-marketing" class="section">
+        <h2>Análise Geral</h2>
+        <p>O objetivo deste relatório foi analisar o desempenho das campanhas de marketing, o perfil do cliente e os produtos/categorias com mais rendimento.</p>
+        <p>Os dados foram extraídos do Kaggle, e você pode acessá-los seguindo o link: <a class="external-link" href="https://www.kaggle.com/datasets/rodsaldanha/arketing-campaign" target="_blank">https://www.kaggle.com/datasets/rodsaldanha/arketing-campaign</a>.</p>
+        <p>Essa foi uma análise um pouco mais simples, sendo que as ferramentas utilizadas foram apenas o Site da fonte de dados, o Excel e o Microsoft Power BI.</p>
+        <p>Verifiquei a consistência dos dados e fiz a transformação e limpeza necessária e comecei a análise.</p>
+      
+        <div class="image-container">
+                <p>Página Inicial</p>
+                <img src="images/mkpainel.png" alt="Página Inicial">
+            </div>
+
+      
+    </section>
+
+    <section id="perfil-cliente" class="section">
+        <h2>Perfil do Cliente</h2>
+        <p>No perfil do cliente, é possível observar que tanto para crianças em casa quanto para adolescentes, os números são bem parecidos. Mais de 50% dos clientes não possuem filhos e apenas uma pequena parte possui 2 filhos.</p>
+        <p>Também é possível observar que a maior parte dos clientes tem uma graduação ou são casados, solteiros, ou estão namorando ou morando juntos. Há poucos clientes com uma formação básica.</p>
+        <p>Em relação ao ano de nascimento, é possível observar que a maioria dos clientes possui idades entre 40 e 60 anos.</p>
+
+      <div class="image-container">
+                <p>Página Inicial</p>
+                <img src="images/mkcliente.png" alt="Página Inicial">
+            </div>
+    </section>
+
+    <section id="analise-campanhas" class="section">
+        <h2>Análise de Campanhas</h2>
+        <p>Na análise das campanhas, é possível observar que a campanha com maior retorno foi a última realizada, enquanto a campanha de número 2 teve o menor retorno.</p>
+        <p>Em relação aos gastos com produtos, é notável que a maioria dos clientes gasta mais com vinhos e carnes, e menos com doces e frutas.</p>
+        <p>Também temos a relação do total de compras durante o período de 2012 a 2014.</p>
+
+      <div class="image-container">
+                <p>Página Inicial</p>
+                <img src="images/mkcampanha.png" alt="Página Inicial">
+            </div>
+    </section>
+
+    <section id="analise-compras" class="section">
+        <h2>Análise de Compras</h2>
+        <p>Nesta análise, é possível ver a quantidade de visitas ao site, o número de reclamações, a média de dias que os clientes ficam sem comprar desde a última compra, a quantidade de compras com descontos, e o total de compras entre todas as campanhas juntas.</p>
+        <p>Podemos observar que os clientes preferem fazer compras diretamente nas lojas e evitam compras por catálogo.</p>
+        <p>Por último, temos a quantidade de compras nas campanhas por média salarial.</p>
+
+      <div class="image-container">
+                <p>Página Inicial</p>
+                <img src="mkcompra.png" alt="Página Inicial">
+            </div>
+    </section>
+
+    <section id="analise-compras-grupo" class="section">
+        <h2>Análise de Compras por Grupo</h2>
+        <p>Na análise de compras por grupos, temos o total de compra em todas as campanhas em relação à quantidade de adolescentes e crianças em casa. É notável que quanto menos ou nenhum filho, as compras são bem maiores.</p>
+        <p>Em relação às compras por estado civil, clientes casados compram muito mais do que os solteiros.</p>
+        <p>Da mesma forma, clientes com graduação têm um poder de compra muito maior do que clientes com formação básica.</p>
+      
+      <div class="image-container">
+                <p>Página Inicial</p>
+                <img src="images/mkgrupo.png" alt="Página Inicial">
+            </div>
+      
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Isabeli Carolina dos Santos</p>
+    </footer>
+</body>
+</html>
