@@ -48,7 +48,7 @@
         }
         h2 {
             color: #348e91;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             border-bottom: 2px solid #348e91;
             padding-bottom: 5px;
         }
@@ -62,33 +62,44 @@
             color: #f2f2f2;
             border-radius: 8px;
             margin: 10px;
-            padding: 15px;
-            flex: 0 0 30%; /* 3 cards por linha */
-            position: relative;
-            cursor: pointer;
+            padding: 20px;
+            flex: 0 0 calc(33% - 20px);
             transition: transform 0.3s;
+            cursor: pointer;
+            position: relative;
         }
         .project-card:hover {
             transform: scale(1.05);
         }
-        .project-details {
+        .project-card h3 {
+            margin: 0 0 10px;
+            font-size: 1.5em;
+        }
+        .description {
             display: none;
-            position: absolute;
+        }
+        .details {
+            display: none;
+            position: fixed;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: rgba(255, 255, 255, 0.9);
-            color: #213635;
-            border-radius: 8px;
-            padding: 15px;
-            z-index: 1;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 30px;
+            overflow-y: auto;
+            z-index: 1000;
         }
-        .project-card h3 {
-            margin: 0 0 10px;
+        .details h2 {
+            color: #fff;
         }
-        .project-card p {
-            margin: 0;
+        .details .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            color: #fff;
         }
     </style>
 </head>
@@ -103,52 +114,70 @@
     <div class="container">
         <h2>Meus Projetos</h2>
         <div class="projects-container">
-            <div class="project-card" onclick="toggleDetails('project1')">
+            <div class="project-card" onclick="showDetails('vendas')">
                 <h3>Análise de Vendas</h3>
-                <p>Desenvolvimento de dashboards para monitorar e otimizar as estratégias de vendas.</p>
-                <div id="project1" class="project-details">
-                    <p>Identificando tendências e oportunidades para maximizar resultados.</p>
-                </div>
+                <p class="description">Desenvolvimento de dashboards para monitorar e otimizar as estratégias de vendas, identificando tendências e oportunidades.</p>
             </div>
-            <div class="project-card" onclick="toggleDetails('project2')">
+            <div class="project-card" onclick="showDetails('financeira')">
                 <h3>Análise Financeira</h3>
-                <p>Criação de relatórios financeiros para controle de despesas.</p>
-                <div id="project2" class="project-details">
-                    <p>Análise de performance e planejamento orçamentário.</p>
-                </div>
+                <p class="description">Criação de relatórios financeiros para análise de performance, controle de despesas e planejamento orçamentário.</p>
             </div>
-            <div class="project-card" onclick="toggleDetails('project3')">
+            <div class="project-card" onclick="showDetails('crm')">
                 <h3>Análise de Dados CRM</h3>
-                <p>Entendimento do comportamento do cliente para melhorar estratégias.</p>
-                <div id="project3" class="project-details">
-                    <p>Melhorando retenção e aquisição de clientes.</p>
-                </div>
+                <p class="description">Análise de dados de CRM para entender o comportamento do cliente e melhorar estratégias de retenção e aquisição.</p>
             </div>
-            <div class="project-card" onclick="toggleDetails('project4')">
+            <div class="project-card" onclick="showDetails('marketing')">
                 <h3>Análise de Dados Marketing</h3>
-                <p>Avaliação de campanhas de marketing para otimizar ROI.</p>
-                <div id="project4" class="project-details">
-                    <p>Ajustando estratégias de mercado.</p>
-                </div>
+                <p class="description">Avaliação de dados de campanhas de marketing para otimizar ROI e ajustar estratégias de mercado.</p>
             </div>
-            <div class="project-card" onclick="toggleDetails('project5')">
+            <div class="project-card" onclick="showDetails('rh')">
                 <h3>Análise de Dados RH</h3>
-                <p>Entendimento do perfil dos funcionários e suas avaliações.</p>
-                <div id="project5" class="project-details">
-                    <p>Melhorando o desempenho da equipe.</p>
-                </div>
+                <p class="description">Análise de dados de RH para entender o perfil dos funcionários e suas avaliações de desempenho.</p>
             </div>
         </div>
     </div>
 
+    <div id="details-vendas" class="details">
+        <span class="close" onclick="closeDetails()">✖</span>
+        <h2>Análise de Vendas</h2>
+        <p>Bem-vindo(a) ao meu projeto de Análise de Vendas. Para a criação do banco de dados, optei por utilizar o "PostgreSQL" juntamente com a ferramenta "DBeaver".</p>
+        <!-- Coloque o conteúdo adicional do projeto aqui -->
+    </div>
+    <div id="details-financeira" class="details">
+        <span class="close" onclick="closeDetails()">✖</span>
+        <h2>Análise Financeira</h2>
+        <p>Conteúdo sobre Análise Financeira.</p>
+        <!-- Coloque o conteúdo adicional do projeto aqui -->
+    </div>
+    <div id="details-crm" class="details">
+        <span class="close" onclick="closeDetails()">✖</span>
+        <h2>Análise de Dados CRM</h2>
+        <p>Conteúdo sobre Análise de Dados CRM.</p>
+        <!-- Coloque o conteúdo adicional do projeto aqui -->
+    </div>
+    <div id="details-marketing" class="details">
+        <span class="close" onclick="closeDetails()">✖</span>
+        <h2>Análise de Dados Marketing</h2>
+        <p>Conteúdo sobre Análise de Dados Marketing.</p>
+        <!-- Coloque o conteúdo adicional do projeto aqui -->
+    </div>
+    <div id="details-rh" class="details">
+        <span class="close" onclick="closeDetails()">✖</span>
+        <h2>Análise de Dados RH</h2>
+        <p>Conteúdo sobre Análise de Dados RH.</p>
+        <!-- Coloque o conteúdo adicional do projeto aqui -->
+    </div>
+
     <script>
-        function toggleDetails(projectId) {
-            const details = document.getElementById(projectId);
-            const isVisible = details.style.display === "block";
-            // Ocultar todos os detalhes
-            document.querySelectorAll('.project-details').forEach(detail => detail.style.display = "none");
-            // Alternar a visibilidade do projeto clicado
-            details.style.display = isVisible ? "none" : "block";
+        function showDetails(project) {
+            document.getElementById(`details-${project}`).style.display = 'block';
+        }
+
+        function closeDetails() {
+            const details = document.querySelectorAll('.details');
+            details.forEach(detail => {
+                detail.style.display = 'none';
+            });
         }
     </script>
 </body>
