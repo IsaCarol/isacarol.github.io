@@ -5,73 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isabeli Carolina</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="icon" href="images/favicon-16x16.png" type="image/png">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #22453a; /* Fundo principal */
-            color: #fff;
+            background-color: #f5f5f5;
+            color: #333;
         }
         header {
-            background-color: #22453a; /* Fundo do cabeçalho */
+            background-color: #fff;
             padding: 20px;
             text-align: center;
-            border-bottom: 1px solid #1e3a2a;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         nav {
-            background-color: #1e3a2a; /* Fundo do menu */
+            background-color: #fff;
             padding: 10px;
             text-align: center;
-            border-bottom: 1px solid #1e3a2a;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         nav a {
-            color: #fff;
+            color: #333;
             text-decoration: none;
             margin: 0 15px;
-            font-weight: bold;
-            padding: 10px 20px;
-            background-color: #1f4a3d; /* Cor de fundo dos links */
-            border-radius: 8px;
-            transition: background 0.3s;
+            font-weight: 500;
+            padding: 10px;
+            transition: color 0.3s;
         }
         nav a:hover {
-            background-color: #1e5a4b; /* Cor de fundo dos links ao passar o mouse */
+            color: #007BFF;
         }
         .container {
             display: flex;
             max-width: 1200px;
             margin: 20px auto;
-            background-color: #22453a; /* Cor de fundo da container */
-            border-radius: 12px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-            overflow: hidden;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .left-column {
             width: 30%;
             padding: 30px;
-            background-color: #22453a; /* Cor de fundo da coluna esquerda */
             text-align: center;
-            border-right: 1px solid #1e3a2a;
+            border-right: 1px solid #e0e0e0;
         }
         .left-column img {
             border-radius: 50%;
-            max-width: 120px;
+            max-width: 100px;
             margin-bottom: 20px;
-            border: 3px solid #1e5a4b; /* Cor da borda da imagem */
+            border: 2px solid #007BFF;
         }
         .left-column h2 {
-            color: #fff; /* Cor dos títulos na coluna esquerda */
+            color: #007BFF;
             margin: 10px 0;
         }
         .left-column .contact-info a {
             display: block;
             margin: 10px 0;
-            color: #fff; /* Cor dos links de contato */
+            color: #333;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 500;
         }
         .left-column .contact-info a:hover {
             text-decoration: underline;
@@ -79,44 +75,38 @@
         .right-column {
             width: 70%;
             padding: 30px;
-            background-color: #22453a; /* Cor de fundo da coluna direita */
         }
         .right-column h2 {
-            color: #fff; /* Cor dos títulos na coluna direita */
+            color: #007BFF;
             margin-bottom: 15px;
-            border-bottom: 2px solid #fff;
+            border-bottom: 2px solid #007BFF;
             padding-bottom: 5px;
         }
         .right-column p {
             margin: 10px 0;
-            color: #e0e0e0;
+            color: #555;
         }
         .section {
             margin-bottom: 30px;
         }
         .icon {
-            font-size: 1.5em;
+            font-size: 1.2em;
             margin-right: 10px;
-            color: #f1c40f; /* Cor dos ícones */
+            color: #007BFF;
         }
-        .skills-list {
+        .tools-list {
             list-style: none;
             padding: 0;
         }
-        .skills-list li {
+        .tools-list li {
             display: flex;
             align-items: center;
             margin-bottom: 15px;
-            background-color: #1e3a2a; /* Cor de fundo dos itens da lista de habilidades */
             padding: 10px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            border-left: 4px solid #007BFF;
         }
-        .skills-list li i {
-            margin-right: 15px;
-        }
-        .skills-list li strong {
-            color: #fff; /* Cor do texto em negrito na lista de habilidades */
+        .tools-list li strong {
+            color: #333;
         }
     </style>
 </head>
@@ -144,23 +134,31 @@
         <div class="right-column">
             <div class="section" id="sobre-mim">
                 <h2>Sobre Mim</h2>
-                <p>Meu nome é Isabeli Carolina dos Santos, sou uma Analista de Dados apaixonada por transformar dados em insights acionáveis e estratégias de negócios bem-sucedidas. </p>
+                <p>Meu nome é Isabeli Carolina dos Santos, sou uma Analista de Dados apaixonada por transformar dados em insights acionáveis e estratégias de negócios bem-sucedidas.</p>
             </div>
 
-            <div class="section" id="o-que-eu-faco">
-                <h2>O que eu faço</h2>
-                <ul class="skills-list">
+            <div class="section" id="ferramentas">
+                <h2>Ferramentas que Utilizo</h2>
+                <ul class="tools-list">
+                    <li>
+                        <i class="fab fa-database icon"></i>
+                        <strong>SQL:</strong> Para gerenciamento e análise de bancos de dados.
+                    </li>
+                    <li>
+                        <i class="fab fa-python icon"></i>
+                        <strong>Python:</strong> Para análise de dados e automação de tarefas.
+                    </li>
+                    <li>
+                        <i class="fas fa-chart-pie icon"></i>
+                        <strong>Power BI:</strong> Para criação de dashboards e visualizações interativas.
+                    </li>
+                    <li>
+                        <i class="fas fa-table icon"></i>
+                        <strong>Excel:</strong> Para análises e relatórios.
+                    </li>
                     <li>
                         <i class="fas fa-chart-line icon"></i>
-                        <strong>Análise de Dados:</strong> Analiso grandes volumes de dados para identificar tendências e fornecer recomendações estratégicas.
-                    </li>
-                    <li>
-                        <i class="fas fa-cogs icon"></i>
-                        <strong>Business Intelligence:</strong> Utilizo ferramentas de BI para criar relatórios e dashboards interativos que facilitam a tomada de decisões.
-                    </li>
-                    <li>
-                        <i class="fas fa-eye icon"></i>
-                        <strong>Data Visualization:</strong> Desenvolvo visualizações de dados claras e impactantes para ajudar a comunicar insights de forma eficaz.
+                        <strong>Looker Studio:</strong> Para visualização e apresentação de dados.
                     </li>
                 </ul>
             </div>
