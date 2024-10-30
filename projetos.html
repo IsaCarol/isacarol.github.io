@@ -140,7 +140,7 @@
     <div id="details-vendas" class="details">
         <span class="close" onclick="closeDetails()">✖</span>
         <h2>Análise de Vendas</h2>
-        <p>Bem-vindo(a) ao meu projeto de Análise de Vendas. Para a criação do banco de dados, optei por utilizar o "PostgreSQL" juntamente com a ferramenta "DBeaver".</p>
+        <p>Bem-vindo(a) ao meu projeto de Análise de Vendas.</p>
         <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -355,26 +355,505 @@ SET VALOR_TOTAL = QUANTIDADE * (SELECT PRECO_UNITARIO FROM PRODUTOS WHERE ID_PRO
     <div id="details-financeira" class="details">
         <span class="close" onclick="closeDetails()">✖</span>
         <h2>Análise Financeira</h2>
-        <p>Conteúdo sobre Análise Financeira.</p>
+        <p>Bem-Vindo ao meu relatório de Análise Financeira.</p>
         <!-- Coloque o conteúdo adicional do projeto aqui -->
     </div>
     <div id="details-crm" class="details">
         <span class="close" onclick="closeDetails()">✖</span>
         <h2>Análise de Dados CRM</h2>
-        <p>Conteúdo sobre Análise de Dados CRM.</p>
-        <!-- Coloque o conteúdo adicional do projeto aqui -->
+        <p>Bem-Vindo ao meu relatório Análise de Dados CRM.</p>
+        <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise de Dados CRM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon-16x16.png" type="image/png">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2; /* Fundo principal */
+            color: #213635; /* Cor do texto */
+        }
+        header {
+            background-color: #348e91; /* Fundo do cabeçalho */
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #1c5052;
+        }
+        h1, h2 {
+            color: #fff; /* Cor dos títulos */
+        }
+        h2 {
+            border-bottom: 2px solid #fff;
+            padding-bottom: 5px;
+        }
+        nav {
+            background-color: #1c5052; /* Fundo do menu */
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #1c5052;
+        }
+        nav a {
+            color: #f2f2f2; /* Cor dos links */
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+        nav a:hover {
+            background-color: #0a0c0d; /* Cor ao passar o mouse */
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff; /* Cor de fundo da container */
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        p {
+            color: #555; /* Cor do texto */
+            line-height: 1.6;
+        }
+        .code-block {
+            background-color: #2c4b3b; /* Fundo do bloco de código */
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-family: 'Courier New', Courier, monospace;
+            color: #e0e0e0;
+            overflow-x: auto;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #1c5052; /* Fundo do rodapé */
+            border-top: 1px solid #1c5052;
+            color: #fff;
+        }
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+        .external-link {
+            color: #1e90ff; /* Cor para links externos */
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .external-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Análise de Dados CRM</h1>
+        <p>Bem-vindo(a) ao meu projeto de Análise de CRM</p>
+    </header>
+
+    <nav>
+        <a href="#banco-dados">Banco de Dados</a>
+        <a href="#modelagem">Modelagem</a>
+        <a href="#inserir-valores">Inserir Valores</a>
+        <a href="#calculos">Cálculos</a>
+        <a href="#bi">Ferramenta de BI</a>
+    </nav>
+
+    <div class="container">
+        <section id="banco-dados">
+            <h2>1º Passo - Banco de Dados</h2>
+            <p>Para a criação do banco de dados, optei por utilizar o "PostgreSQL" juntamente com a ferramenta "DBeaver".</p>
+        </section>
+
+        <section id="modelagem">
+            <h2>2º Passo - Modelagem</h2>
+            <p>Para dar início às modelagens, comecei pela modelagem de dados conceitual em um bloco de notas comum, onde escrevi em forma de tópicos o que seria necessário, pensando nos requisitos de negócios que gostaria de analisar e o que seria interessante visualizar.</p>
+            <p>Após fazer o modelo conceitual, utilizei o DrawSQL, uma plataforma online, para montar meu modelo lógico, montando a tabela fato e as dimensões, adicionando as métricas fundamentais em cada uma, fazendo todo relacionamento necessário entre as tabelas. Ao finalizar o modelo lógico, a plataforma "DrawSQL" permite fazer a exportação do arquivo para MySQL, PostgreSQL, etc. Baixei o arquivo do modelo lógico e o executei no Visual Studio Code, já integrado com meu banco de dados.</p>
+            <p>Para acessar a ferramenta DrawSQL, clique <a class="external-link" href="https://drawsql.app/" target="_blank">aqui</a>.</p>
+        </section>
+
+        <section id="inserir-valores">
+            <h2>3º Passo - Inserir Valores</h2>
+            <p>Para automatizar a inserção de valores nas tabelas, utilizei um script Python que inseriu dados fictícios no banco de dados. Esse script continha as informações de conexão ao banco e os comandos necessários para popular as tabelas.</p>
+            <div class="code-block">
+                <p>Veja o exemplo do script Python:</p>
+                <pre>
+import psycopg2
+
+def inserir_dados():
+    conexao = psycopg2.connect(
+        dbname="vendas_db", user="usuario", password="senha", host="localhost"
+    )
+    cursor = conexao.cursor()
+
+    cursor.execute("INSERT INTO FT_VENDAS (DATA_VENDA, ID_PRODUTO, ID_CLIENTE, QUANTIDADE, VALOR_TOTAL) VALUES (%s, %s, %s, %s, %s)", (data_venda, id_produto, id_cliente, quantidade, valor_total))
+
+    conexao.commit()
+    cursor.close()
+    conexao.close()
+
+inserir_dados()
+                </pre>
+            </div>
+        </section>
+
+        <section id="calculos">
+            <h2>4º Passo - Cálculos</h2>
+            <p>Minha tabela FT_VENDAS necessitava de uma coluna que mostrasse o valor total de vendas. No DBeaver, criei um script SQL que adicionou essa coluna e atualizou os valores, realizando um <i>JOIN</i> entre as tabelas de produtos e vendas.</p>
+            <div class="code-block">
+                <p>Veja o exemplo do script SQL:</p>
+                <pre>
+ALTER TABLE FT_VENDAS ADD COLUMN VALOR_TOTAL DECIMAL;
+UPDATE FT_VENDAS 
+SET VALOR_TOTAL = QUANTIDADE * (SELECT PRECO_UNITARIO FROM PRODUTOS WHERE ID_PRODUTO = FT_VENDAS.ID_PRODUTO);
+                </pre>
+            </div>
+        </section>
+
+        <section id="bi">
+            <h2>5º Passo - Ferramenta de BI</h2>
+            <p>Para realizar as análises e montar os relatórios, utilizei o Microsoft Power BI. Integrei meu banco de dados PostgreSQL ao Power BI para que qualquer modificação fosse atualizada automaticamente nos relatórios.</p>
+        </section>
+
+        <section id="links">
+            <h2>Links dos Arquivos</h2>
+            <div class="image-container">
+                <p>Página Inicial</p>
+                <img src="images/paginainicial.png" alt="Página Inicial">
+            </div>
+            
+            <div class="image-container">
+                <p>Leads</p>
+                <img src="images/analiseleads.png" alt="Leads">
+            </div>
+            
+            <div class="image-container">
+                <p>Interações</p>
+                <img src="images/analiseinteracao.png" alt="Interações">
+            </div>
+
+            <div class="image-container">
+                <p>Clientes</p>
+                <img src="images/analisecliente.png" alt="Clientes">
+            </div>
+            
+            <div class="image-container">
+                <p>Vendas</p>
+                <img src="images/analisevenda.png" alt="Vendas"> 
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Isabeli Carolina dos Santos</p>
+    </footer>
+</body>
+</html
     </div>
     <div id="details-marketing" class="details">
         <span class="close" onclick="closeDetails()">✖</span>
         <h2>Análise de Dados Marketing</h2>
-        <p>Conteúdo sobre Análise de Dados Marketing.</p>
-        <!-- Coloque o conteúdo adicional do projeto aqui -->
+        <p>Bem-Vindo ao meu relatório de Análise de Dados Marketing.</p>
+        <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise de Campanhas de Marketing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon-16x16.png" type="image/png">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2; /* Fundo principal */
+            color: #213635; /* Cor do texto */
+        }
+        header {
+            background-color: #348e91; /* Fundo do cabeçalho */
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #1c5052;
+        }
+        h1, h2 {
+            color: #fff; /* Cor dos títulos */
+        }
+        h2 {
+            border-bottom: 2px solid #fff;
+            padding-bottom: 5px;
+        }
+        .section {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 1200px;
+            background-color: #fff; /* Fundo da seção */
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        p {
+            color: #555; /* Cor do texto */
+            line-height: 1.6;
+        }
+        .code-block {
+            background-color: #2c4b3b; /* Fundo do bloco de código */
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-family: 'Courier New', Courier, monospace;
+            color: #e0e0e0;
+            overflow-x: auto;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #1c5052; /* Fundo do rodapé */
+            border-top: 1px solid #1c5052;
+            color: #fff;
+        }
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+        .external-link {
+            color: #1e90ff; /* Cor para links externos */
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .external-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Análise de Campanhas de Marketing</h1>
+        <p>Bem-vindo(a) ao relatório de análise de campanhas de marketing</p>
+    </header>
+
+    <section id="analise-marketing" class="section">
+        <h2>Análise Geral</h2>
+        <p>O objetivo deste relatório foi analisar o desempenho das campanhas de marketing, o perfil do cliente e os produtos/categorias com mais rendimento.</p>
+        <p>Os dados foram extraídos do Kaggle, e você pode acessá-los seguindo o link: <a class="external-link" href="https://www.kaggle.com/datasets/rodsaldanha/arketing-campaign" target="_blank">https://www.kaggle.com/datasets/rodsaldanha/arketing-campaign</a>.</p>
+        <p>Essa foi uma análise um pouco mais simples, sendo que as ferramentas utilizadas foram apenas o Site da fonte de dados, o Excel e o Microsoft Power BI.</p>
+        <p>Verifiquei a consistência dos dados e fiz a transformação e limpeza necessária e comecei a análise.</p>
+      
+        <div class="image-container">
+            <p>Página Inicial</p>
+            <img src="images/mkpainel.png" alt="Página Inicial">
+        </div>
+    </section>
+
+    <section id="perfil-cliente" class="section">
+        <h2>Perfil do Cliente</h2>
+        <p>No perfil do cliente, é possível observar que tanto para crianças em casa quanto para adolescentes, os números são bem parecidos. Mais de 50% dos clientes não possuem filhos e apenas uma pequena parte possui 2 filhos.</p>
+        <p>Também é possível observar que a maior parte dos clientes tem uma graduação ou são casados, solteiros, ou estão namorando ou morando juntos. Há poucos clientes com uma formação básica.</p>
+        <p>Em relação ao ano de nascimento, é possível observar que a maioria dos clientes possui idades entre 40 e 60 anos.</p>
+
+        <div class="image-container">
+            <p>Perfil Cliente</p>
+            <img src="images/mkcliente.png" alt="Perfil Cliente">
+        </div>
+    </section>
+
+    <section id="analise-campanhas" class="section">
+        <h2>Análise de Campanhas</h2>
+        <p>Na análise das campanhas, é possível observar que a campanha com maior retorno foi a última realizada, enquanto a campanha de número 2 teve o menor retorno.</p>
+        <p>Em relação aos gastos com produtos, é notável que a maioria dos clientes gasta mais com vinhos e carnes, e menos com doces e frutas.</p>
+        <p>Também temos a relação do total de compras durante o período de 2012 a 2014.</p>
+
+        <div class="image-container">
+            <p>Análise Campanhas</p>
+            <img src="images/mkcampanha.png" alt="Análise Campanhas">
+        </div>
+    </section>
+
+    <section id="analise-compras" class="section">
+        <h2>Análise de Compras</h2>
+        <p>Nesta análise, é possível ver a quantidade de visitas ao site, o número de reclamações, a média de dias que os clientes ficam sem comprar desde a última compra, a quantidade de compras com descontos, e o total de compras entre todas as campanhas juntas.</p>
+        <p>Podemos observar que os clientes preferem fazer compras diretamente nas lojas e evitam compras por catálogo.</p>
+        <p>Por último, temos a quantidade de compras nas campanhas por média salarial.</p>
+
+        <div class="image-container">
+            <p>Análise Compras</p>
+            <img src="images/mkcompra.png" alt="Análise Compras">
+        </div>
+    </section>
+
+    <section id="analise-compras-grupo" class="section">
+        <h2>Análise de Compras por Grupo</h2>
+        <p>Na análise de compras por grupos, temos o total de compra em todas as campanhas em relação à quantidade de adolescentes e crianças em casa. É notável que quanto menos ou nenhum filho, as compras são bem maiores.</p>
+        <p>Em relação às compras por estado civil, clientes casados compram muito mais do que os solteiros.</p>
+        <p>Da mesma forma, clientes com graduação têm um poder de compra muito maior do que clientes com formação básica.</p>
+      
+        <div class="image-container">
+            <p>Análise Compras Grupo</p>
+            <img src="images/mkgrupo.png" alt="Análise Compras Grupo">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Isabeli Carolina dos Santos</p>
+    </footer>
+</body>
+</html>
     </div>
     <div id="details-rh" class="details">
         <span class="close" onclick="closeDetails()">✖</span>
         <h2>Análise de Dados RH</h2>
-        <p>Conteúdo sobre Análise de Dados RH.</p>
-        <!-- Coloque o conteúdo adicional do projeto aqui -->
+        <p>Bem-Vindo ao meu relatório de Análise de Dados RH.</p>
+        <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Data Analysis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon-16x16.png" type="image/png">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2; /* Fundo principal */
+            color: #213635; /* Cor do texto */
+        }
+        header {
+            background-color: #4a7c84; /* Fundo do cabeçalho */
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #3c6467;
+        }
+        h1, h2 {
+            color: #fff; /* Cor dos títulos */
+        }
+        h2 {
+            border-bottom: 2px solid #fff;
+            padding-bottom: 5px;
+        }
+        .section {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 1200px;
+            background-color: #fff; /* Fundo da seção */
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        p {
+            color: #555; /* Cor do texto */
+            line-height: 1.6;
+        }
+        .code-block {
+            background-color: #2c4b3b; /* Fundo do bloco de código */
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-family: 'Courier New', Courier, monospace;
+            color: #e0e0e0;
+            overflow-x: auto;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #3c6467; /* Fundo do rodapé */
+            border-top: 1px solid #3c6467;
+            color: #fff;
+        }
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+        .external-link {
+            color: #1e90ff; /* Cor para links externos */
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .external-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HR Data Analysis</h1>
+        <p>Welcome To The HR Data Analysis Report</p>
+    </header>
+
+    <section id="Analyse-RH" class="section">
+        <h2>General Analysis</h2>
+        <p>The objective of this report was to analyze the employee profile and performance.</p>
+        <p>The data was extracted from Kaggle, and you can access it using the following link: <a class="external-link" href="https://www.kaggle.com/datasets/mahmoudemadabdallah/hr-analytics-employee-attrition-and-performance" target="_blank">Kaggle Dataset</a>.</p>
+        <p>This was a relatively straightforward analysis, utilizing only the data source website, Excel, and Microsoft Power BI.</p>
+        <p>I checked the data consistency, performed the necessary transformation and cleaning, and began the analysis.</p>
+    </section>
+
+    <section id="Analyse-Employee" class="section">
+        <h2>Analyse Employee</h2>
+        <p>In analyzing the employee profile, we have a total of 1,470 employees, with an average annual salary of $112,000, an average age of 29 years, and an average distance of 22.5 km between home and work.</p>
+        <p>We can observe that the majority of employees are women, hold a degree in Computer Science, are married, belong to the White ethnicity, and frequently travel for business.</p>
+        <p>In the left panel, we can select various options to view, such as the year of hiring, current employment status, overtime hours, department, state of residence, and more.</p>
+
+        <div class="image-container">
+            <p>Analyse Employee</p>
+            <img src="images/AnalyseEmployee.png" alt="Analyse Employee">
+        </div>
+    </section>
+
+    <section id="analyse-satisfaction" class="section">
+        <h2>Analyse Satisfaction</h2>
+        <p>Here we have a total of 6,709 reviews and a satisfaction level where we can analyze job satisfaction, relationship satisfaction, and environment satisfaction.</p>
+
+        <div class="image-container">
+            <p>Analyse Satisfaction</p>
+            <img src="images/AnalyseSatisfaction.png" alt="Analyse Satisfaction">
+        </div>
+    </section>
+
+    <section id="Analyse-Ratings" class="section">
+        <h2>Analyse Ratings</h2>
+        <p>We have the number of training sessions available per year, the number of individuals who attended the training, and how many sessions were conducted. We also have data on work-life balance, self-assessment, and manager evaluation.</p>
+
+        <div class="image-container">
+            <p>Analyse Ratings</p>
+            <img src="images/AnalyseRatings.png" alt="Analyse Ratings">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Isabeli Carolina dos Santos</p>
+    </footer>
+</body>
+</html>
     </div>
 
     <script>
