@@ -141,7 +141,216 @@
         <span class="close" onclick="closeDetails()">✖</span>
         <h2>Análise de Vendas</h2>
         <p>Bem-vindo(a) ao meu projeto de Análise de Vendas. Para a criação do banco de dados, optei por utilizar o "PostgreSQL" juntamente com a ferramenta "DBeaver".</p>
-        <!-- Coloque o conteúdo adicional do projeto aqui -->
+        <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise de Vendas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon-16x16.png" type="image/png">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2; /* Fundo principal */
+            color: #213635; /* Cor do texto */
+        }
+        header {
+            background-color: #348e91; /* Fundo do cabeçalho */
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #1c5052;
+        }
+        h1, h2 {
+            color: #fff; /* Cor dos títulos */
+        }
+        h2 {
+            border-bottom: 2px solid #fff;
+            padding-bottom: 5px;
+        }
+        nav {
+            background-color: #1c5052; /* Fundo do menu */
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #1c5052;
+        }
+        nav a {
+            color: #f2f2f2; /* Cor dos links */
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+        nav a:hover {
+            background-color: #0a0c0d; /* Cor ao passar o mouse */
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff; /* Cor de fundo da container */
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        p {
+            color: #555; /* Cor do texto */
+            line-height: 1.6;
+        }
+        .code-block {
+            background-color: #2c4b3b; /* Fundo do bloco de código */
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-family: 'Courier New', Courier, monospace;
+            color: #e0e0e0;
+            overflow-x: auto;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #1c5052; /* Fundo do rodapé */
+            border-top: 1px solid #1c5052;
+            color: #fff;
+        }
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Análise de Vendas</h1>
+        <p>Bem-vindo(a) ao meu projeto de Análise de Vendas</p>
+    </header>
+
+    <nav>
+        <a href="#banco-dados">Banco de Dados</a>
+        <a href="#modelagem">Modelagem</a>
+        <a href="#inserir-valores">Inserir Valores</a>
+        <a href="#calculos">Cálculos</a>
+        <a href="#bi">Ferramenta de BI</a>
+    </nav>
+
+    <div class="container">
+        <section id="banco-dados">
+            <h2>1º Passo - Banco de Dados</h2>
+            <p>Para a criação do banco de dados, optei por utilizar o "PostgreSQL" juntamente com a ferramenta "DBeaver".</p>
+        </section>
+
+        <section id="modelagem">
+            <h2>2º Passo - Modelagem</h2>
+            <p>Para dar início às modelagens, comecei pela modelagem de dados conceitual em um bloco de notas comum, onde escrevi em forma de tópicos o que seria necessário, pensando nos requisitos de negócios que gostaria de analisar e o que seria interessante visualizar.</p>
+            <p>Após fazer o modelo conceitual, utilizei o DrawSQL, uma plataforma online, para montar meu modelo lógico, montando a tabela fato e as dimensões, adicionando as métricas fundamentais em cada uma, fazendo todo relacionamento necessário entre as tabelas. Ao finalizar o modelo lógico, a plataforma "DrawSQL" permite fazer a exportação do arquivo para MySQL, PostgreSQL, etc. Baixei o arquivo do modelo lógico e o executei no Visual Studio Code, já integrado com meu banco de dados.</p>
+            <div class="code-block">
+                <p>Veja o exemplo do script SQL:</p>
+                <pre>
+CREATE TABLE FT_VENDAS (
+    ID_VENDA SERIAL PRIMARY KEY,
+    DATA_VENDA DATE,
+    ID_PRODUTO INT,
+    ID_CLIENTE INT,
+    QUANTIDADE INT,
+    VALOR_TOTAL DECIMAL
+);
+                </pre>
+            </div>
+        </section>
+
+        <section id="inserir-valores">
+            <h2>3º Passo - Inserir Valores</h2>
+            <p>Para automatizar a inserção de valores nas tabelas, utilizei um script Python que inseriu dados fictícios no banco de dados. Esse script continha as informações de conexão ao banco e os comandos necessários para popular as tabelas.</p>
+            <div class="code-block">
+                <p>Veja o exemplo do script Python:</p>
+                <pre>
+import psycopg2
+
+def inserir_dados():
+    conexao = psycopg2.connect(
+        dbname="vendas_db", user="usuario", password="senha", host="localhost"
+    )
+    cursor = conexao.cursor()
+
+    cursor.execute("INSERT INTO FT_VENDAS (DATA_VENDA, ID_PRODUTO, ID_CLIENTE, QUANTIDADE, VALOR_TOTAL) VALUES (%s, %s, %s, %s, %s)", (data_venda, id_produto, id_cliente, quantidade, valor_total))
+
+    conexao.commit()
+    cursor.close()
+    conexao.close()
+
+inserir_dados()
+                </pre>
+            </div>
+        </section>
+
+        <section id="calculos">
+            <h2>4º Passo - Cálculos</h2>
+            <p>Minha tabela FT_VENDAS necessitava de uma coluna que mostrasse o valor total de vendas. No DBeaver, criei um script SQL que adicionou essa coluna e atualizou os valores, realizando um <i>JOIN</i> entre as tabelas de produtos e vendas.</p>
+            <div class="code-block">
+                <p>Veja o exemplo do script SQL:</p>
+                <pre>
+ALTER TABLE FT_VENDAS ADD COLUMN VALOR_TOTAL DECIMAL;
+UPDATE FT_VENDAS 
+SET VALOR_TOTAL = QUANTIDADE * (SELECT PRECO_UNITARIO FROM PRODUTOS WHERE ID_PRODUTO = FT_VENDAS.ID_PRODUTO);
+                </pre>
+            </div>
+        </section>
+
+        <section id="bi">
+            <h2>5º Passo - Ferramenta de BI</h2>
+            <p>Para realizar as análises e montar os relatórios, utilizei o Microsoft Power BI. Integrei meu banco de dados PostgreSQL ao Power BI para que qualquer modificação fosse atualizada automaticamente nos relatórios.</p>
+        </section>
+
+        <section id="requisitos-negocio">
+            <h2>Requisitos de Negócio</h2>
+            <ul>
+                <li>Análise de Desempenho de Produtos</li>
+                <li>Análise de Desempenho de Vendedores</li>
+                <li>Análise Perfil do Cliente</li>
+                <li>Análise de Canais de Venda</li>
+                <li>Análise Temporal de Vendas</li>
+            </ul>
+        </section>
+
+        <section id="links">
+            <h2>Links dos Arquivos</h2>
+            <div class="image-container">
+                <img src="images/analiseproduto.png" alt="Análise de Desempenho de Produtos">
+                <p>Análise de Desempenho de Produtos</p>
+            </div>
+            <div class="image-container">
+                <img src="images/analisetempo.png" alt="Análise Temporal de Vendas">
+                <p>Análise Temporal de Vendas</p>
+            </div>
+            <div class="image-container">
+                <img src="images/analisevendedor.png" alt="Análise de Desempenho de Vendedores">
+                <p>Análise de Desempenho de Vendedores</p>
+            </div>
+            <div class="image-container">
+                <img src="images/perfilcliente.png" alt="Análise Perfil do Cliente">
+                <p>Análise Perfil do Cliente</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Isabeli Carolina dos Santos</p>
+    </footer>
+</body>
+</html><!-- Coloque o conteúdo adicional do projeto aqui -->
     </div>
     <div id="details-financeira" class="details">
         <span class="close" onclick="closeDetails()">✖</span>
