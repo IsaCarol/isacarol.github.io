@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise Trabalho Remoto e Saúde Mental </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon-16x16.png" type="image/png">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2; /* Fundo principal */
+            color: #213635; /* Cor do texto */
+        }
+        header {
+            background-color: #348e91; /* Fundo do cabeçalho */
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #1c5052;
+        }
+        h1, h2 {
+            color: #fff; /* Cor dos títulos */
+        }
+        h2 {
+            border-bottom: 2px solid #fff;
+            padding-bottom: 5px;
+        }
+        .section {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 1200px;
+            background-color: #fff; /* Fundo da seção */
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        p {
+            color: #555; /* Cor do texto */
+            line-height: 1.6;
+        }
+        .code-block {
+            background-color: #2c4b3b; /* Fundo do bloco de código */
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-family: 'Courier New', Courier, monospace;
+            color: #e0e0e0;
+            overflow-x: auto;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #1c5052; /* Fundo do rodapé */
+            border-top: 1px solid #1c5052;
+            color: #fff;
+        }
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+        .external-link {
+            color: #1e90ff; /* Cor para links externos */
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .external-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Análise de Trabalho Remoto e Saúde Mental</h1>
+        <p>Bem-vindo(a) ao relatório de análise de Trabalho Remoto e Saúde Mental</p>
+    </header>
+
+    <section id="analise-work" class="section">
+        <h2>Análise Geral</h2>
+        <p>Este conjunto de dados avalia a influência do trabalho remoto na saúde mental, reunindo respostas de indivíduos de diversas faixas demográficas.</p>
+        <p>Inclui indicadores principais, como satisfação com o trabalho, níveis de ansiedade e a gestão entre vida pessoal e profissional..</p>
+        <p>Os dados foram extraídos do Kaggle, e você pode acessá-los seguindo o link: <a class="external-link" href="https://www.kaggle.com/datasets/waqi786/remote-work-and-mental-health." target="_blank">https://www.kaggle.com/datasets/waqi786/remote-work-and-mental-health.</a>.</p>
+        <p>Essa foi uma análise um pouco mais simples, sendo que as ferramentas utilizadas foram apenas o Site da fonte de dados, o Excel e o Microsoft Power BI.</p>
+        <p>Verifiquei a consistência dos dados, fiz a transformação e limpeza necessária.</p>
+      
+
+    <section id="analyze_employee" class="section">
+        <h2>Analyse Employee</h2>
+        <p>Na análise do perfil do funcionário, é possível observar que a média de idade é de 41 anos entre os 5 mil perfis analisados. Também podemos ver que a média de experiência de trabalho é de 18 anos.</p>
+        <p>Temos que, o genêro dos funcionários está bem distribuido, quase que 25% para cada genêro.</p>
+        <p>Vemos que a maioria dos funcionários que dormem mal, tem um nível de estresse mais elevado. A maioria dos funcionários que dorme mais ou menos tem um nível de estresse médio. A maioria dos funcionários que dormem bem tem um nível de estresse também médio</p>
+        <p>Também podemos observar que a maioria dos funcionários fazem exercícios físicos toda semana.</p>
+
+        <div class="image-container">
+            <p>Analyze Employee</p>
+            <img src="images/employee.png" alt="Analyze Employee">
+        </div>
+    </section>
+
+    <section id="analyze_work" class="section">
+        <h2>Analyze Work</h2>
+        <p>Na análise sobre o trabalho, podemos observar que a maioria dos funcioários são do setor de Finanças e TI, enquanto a minoria é do setor de consultoria.</p>
+        <p>Em relação a quanto os funcionários estão satisfeitos sobre o trabalho remoto, temos uma distribuição bem uniforme.</p>
+        <p>No modo de trabalho é possível ver que a maioria das pessoas trabalham de forma remota, enquanto a minoria trabalha de forma presencial, sendo o modelo híbrido a média.</p>
+
+        <div class="image-container">
+            <p>Analyze Work</p>
+            <img src="images/work.png" alt="Analyze Work">
+        </div>
+    </section>
+
+    <section id="aanalyze_condition" class="section">
+        <h2>Analyze Condition</h2>
+        <p>Nesta análise, podemos observar a condição mental dos funcionários por modelo de trabalho, prescencial, remoto e híbrido .</p>
+        <p>Vemos que a maioria das pessoas que possuem burnout trabalham de forma presencial, sendo que quem trabalha de forma remota está quase se igualando.</p>
+        <p>A maioria dos funcionários que possuem ansiedade trabalham de forma remota. E a maioria dos funcionários que possuem depressão trabalham de forma híbrida</p>
+        <p>Podemos ver também que a maioria dos funcionários trabalham apenas cerca de 26 horas por semana.</P>
+
+        <div class="image-container">
+            <p>Análise Compras</p>
+            <img src="images/condition.png" alt="Analyze Condition">
+        </div>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2024 Isabeli Carolina dos Santos</p>
+    </footer>
+</body>
+</html>
